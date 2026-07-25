@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Special+Elite&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -808,6 +809,273 @@
         box-shadow: none;
       }
     }
+
+    /* Direção editorial compacta — arquivo pessoal / papelaria */
+    :root {
+      --shell: min(980px, calc(100% - 40px));
+      --text-column: 100%;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+    }
+
+    .brand,
+    h1,
+    .hero-subtitle,
+    .manifesto-copy,
+    .note h2,
+    .discovery h2,
+    .pull-quote,
+    .small-note h2,
+    .library-card h2,
+    .closing p,
+    .footer-brand,
+    .prose .short {
+      font-family: "Special Elite", "Courier New", monospace;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .site-header {
+      position: static;
+    }
+
+    .header-inner {
+      min-height: 58px;
+    }
+
+    .brand {
+      font-size: .98rem;
+    }
+
+    .hero {
+      padding: 34px 0 26px;
+    }
+
+    .section-name {
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.45rem, 6vw, 4.1rem);
+      line-height: 1;
+    }
+
+    .issue-number {
+      padding-left: 12px;
+      font-size: .88rem;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+      font-size: clamp(1.12rem, 2.6vw, 1.55rem);
+      line-height: 1.35;
+    }
+
+    .manifesto {
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      padding: 24px 0 42px;
+    }
+
+    .manifesto-copy {
+      max-width: 620px;
+      font-size: clamp(1.08rem, 2.1vw, 1.38rem);
+      line-height: 1.45;
+    }
+
+    .note {
+      width: min(740px, calc(100% - 18px));
+      margin-bottom: 56px;
+      padding: 34px 40px;
+    }
+
+    .note h2 {
+      margin-bottom: 22px;
+      font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+    }
+
+    .prose {
+      font-size: .94rem;
+      line-height: 1.58;
+    }
+
+    .prose p {
+      margin-bottom: .72em;
+    }
+
+    .prose .short {
+      font-size: 1.03rem;
+      line-height: 1.4;
+    }
+
+    .discovery {
+      display: grid;
+      grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);
+      gap: 24px 34px;
+      margin-bottom: 30px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: rgba(251, 246, 238, .72);
+      box-shadow: 4px 5px 0 rgba(37, 38, 58, .12);
+    }
+
+    .discovery:nth-of-type(even) {
+      transform: rotate(.15deg);
+    }
+
+    .discovery-heading,
+    .site-url {
+      grid-column: 1 / -1;
+    }
+
+    .discovery-heading {
+      gap: 12px;
+      padding-bottom: 14px;
+    }
+
+    .discovery h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+      line-height: 1.1;
+    }
+
+    .site-url {
+      width: fit-content;
+      margin: -12px 0 0;
+      font-size: .64rem;
+    }
+
+    .site-shot {
+      align-self: start;
+      margin: 0;
+      padding: 7px;
+      transform: rotate(-1deg);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .site-shot img {
+      aspect-ratio: 4 / 3;
+    }
+
+    .site-shot figcaption {
+      display: block;
+      padding-top: 7px;
+      font-size: .55rem;
+    }
+
+    .site-shot figcaption span:last-child {
+      display: block;
+      margin-top: 2px;
+    }
+
+    .discovery-content {
+      display: block;
+    }
+
+    .pull-quote {
+      margin: 0 0 18px;
+      padding-left: 14px;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      line-height: 1.35;
+    }
+
+    .shelf-reason {
+      margin-top: 22px;
+      padding: 13px 15px;
+      font-size: .68rem;
+    }
+
+    .tag {
+      padding: 4px 7px;
+      font-size: .6rem;
+    }
+
+    .small-note {
+      grid-template-columns: .52fr 1.48fr;
+      gap: 38px;
+      margin: 54px auto 58px;
+      padding: 34px 40px;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .small-note h2 {
+      font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+      line-height: 1.25;
+    }
+
+    .library-card {
+      grid-template-columns: .62fr 1.38fr;
+      gap: 36px;
+      margin-bottom: 54px;
+      padding: 36px 40px;
+    }
+
+    .library-card h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    .library-details div {
+      padding: 9px 0;
+    }
+
+    .closing {
+      padding: 48px 0 54px;
+    }
+
+    .closing p {
+      margin-bottom: 20px;
+      font-size: clamp(1.65rem, 3.8vw, 2.7rem);
+      line-height: 1.2;
+    }
+
+    .share-button {
+      min-height: 44px;
+      font-size: .78rem;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+    }
+
+    .footer-brand {
+      font-size: clamp(1.55rem, 3.5vw, 2.5rem);
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --shell: min(100% - 24px, 980px);
+      }
+
+      .manifesto,
+      .discovery,
+      .small-note,
+      .library-card {
+        grid-template-columns: 1fr;
+      }
+
+      .manifesto {
+        gap: 10px;
+      }
+
+      .note,
+      .small-note,
+      .library-card {
+        padding: 28px 24px;
+      }
+
+      .discovery {
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .site-shot img {
+        aspect-ratio: 16 / 10;
+      }
+    }
   </style>
 </head>
 
@@ -885,7 +1153,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="assets/bonitezas-001/window-swap.jpg" alt="Tela inicial do Window Swap com o convite para abrir uma janela em algum lugar do mundo" width="1362" height="940">
+        <img src="window-swap.jpg" alt="Tela inicial do Window Swap com o convite para abrir uma janela em algum lugar do mundo" width="1362" height="940">
         <figcaption>
           <span>captura da experiência</span>
           <span>window swap · 26 jul 2026</span>
@@ -933,7 +1201,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="assets/bonitezas-001/radio-garden.jpg" alt="Radio Garden aberto em uma rádio de São Paulo, com o globo interativo ao fundo" width="1362" height="940">
+        <img src="radio-garden.jpg" alt="Radio Garden aberto em uma rádio de São Paulo, com o globo interativo ao fundo" width="1362" height="940">
         <figcaption>
           <span>captura da experiência</span>
           <span>radio garden · 26 jul 2026</span>
@@ -978,7 +1246,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="assets/bonitezas-001/the-deep-sea.jpg" alt="Abertura do projeto The Deep Sea, com o título sobre a superfície do oceano" width="887" height="516">
+        <img src="the-deep-sea.jpg" alt="Abertura do projeto The Deep Sea, com o título sobre a superfície do oceano" width="887" height="516">
         <figcaption>
           <span>captura arquivada da experiência</span>
           <span>the deep sea · neal agarwal</span>
