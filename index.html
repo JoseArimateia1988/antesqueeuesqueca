@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antes que eu esqueça</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="home">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">antes que eu esqueça</a>
+    <button class="menu-btn">menu</button>
+    <nav class="nav-links">
+      <a href="index.html#guardados">o que guardei</a>
+      <a href="index.html#gavetas">gavetas</a>
+      <a href="busca.html">buscar</a>
+      <a href="sobre.html">sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero"><div class="container">
+  <div class="eyebrow">uma biblioteca pessoal aberta</div>
+  <h1>Deixa eu <span class="scribble">guardar</span> isso aqui.</h1>
+  <div class="hero-copy">
+    <p>Ideias, ferramentas, vídeos, conversas e pensamentos aleatórios que eu não queria deixar o algoritmo levar embora.</p>
+    <div class="note-sticker"><strong>antes que eu esqueça...</strong> isto aqui não é um portal de notícias. É um lugar para voltar depois.</div>
+  </div>
+  <form class="search-wrap" id="home-search"><input placeholder="procurar alguma coisa que guardei..."><button>buscar</button></form>
+</div></section>
+<section class="section" id="guardados"><div class="container">
+  <div class="section-title"><h2>Fui guardando...</h2><p>Não estão em ordem de importância. Talvez nem de lógica. Mas todos ficaram comigo por algum motivo.</p></div>
+  <div class="posts" id="posts"></div>
+</div></section>
+<section class="section" id="gavetas"><div class="container">
+  <div class="section-title"><h2>Guardei isso em</h2><p>Clique numa gaveta e veja onde as ideias foram se encontrando.</p></div>
+  <div class="drawer-grid" id="drawer-grid"></div>
+</div></section>
+<section class="section"><div class="container"><div class="manifesto">
+  <div class="eyebrow">o princípio da estante</div>
+  <h2>Se eu não voltaria nisso daqui a seis meses, talvez não precise entrar aqui.</h2>
+  <p>Este projeto existe para dar endereço às ideias que merecem mais tempo do que um scroll.</p>
+</div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <strong>antes que eu esqueça</strong>
+    <span>um projeto camis.moodlabs ✦ 2026</span>
+  </div>
+</footer>
+<script src="data.js"></script><script src="app.js"></script></body></html>
