@@ -7,9 +7,9 @@
   <meta name="description" content="Bonitezas #001 — lugares da internet que me fizeram parar o que eu estava fazendo hoje.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Bonitezas #001 — Antes que eu esqueça">
+  <meta property="og:title" content="Bonitezas #001 — antes que eu esqueça">
   <meta property="og:description" content="Lugares da internet que me fizeram parar o que eu estava fazendo hoje.">
-  <title>Bonitezas #001 — Antes que eu esqueça</title>
+  <title>Bonitezas #001 — antes que eu esqueça</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1076,6 +1076,213 @@
         aspect-ratio: 16 / 10;
       }
     }
+
+    /* Ajustes de densidade e distribuição */
+    .project-name {
+      font-weight: 800;
+      text-transform: lowercase;
+    }
+
+    .header-inner {
+      min-height: 54px;
+    }
+
+    .header-actions {
+      position: relative;
+    }
+
+    .save-wrap {
+      position: relative;
+    }
+
+    .save-note {
+      position: absolute;
+      top: 43px;
+      right: 4px;
+      width: 152px;
+      color: var(--blush);
+      font-family: "Caveat", cursive;
+      font-size: .88rem;
+      line-height: 1;
+      text-align: right;
+      transform: rotate(-2deg);
+      pointer-events: none;
+    }
+
+    .save-note::before {
+      margin-right: 5px;
+      content: "↖";
+    }
+
+    .hero {
+      padding: 24px 0 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4.7vw, 3.2rem);
+    }
+
+    .hero-subtitle {
+      max-width: 620px;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+    }
+
+    .manifesto {
+      grid-template-columns: 130px 1fr;
+      gap: 22px;
+      padding: 18px 0 32px;
+    }
+
+    .manifesto-copy {
+      font-size: clamp(1rem, 1.8vw, 1.24rem);
+      line-height: 1.42;
+    }
+
+    .note {
+      width: min(860px, calc(100% - 14px));
+      margin-bottom: 40px;
+      padding: 27px 32px;
+    }
+
+    .note h2 {
+      margin-bottom: 18px;
+      font-size: clamp(1.45rem, 3vw, 1.95rem);
+    }
+
+    .note-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+    }
+
+    .note-columns p {
+      margin: 0 0 .72em;
+    }
+
+    .identity-icon {
+      display: inline-grid;
+      width: 28px;
+      aspect-ratio: 1;
+      margin-right: 8px;
+      place-items: center;
+      vertical-align: middle;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      background: var(--icon-color, var(--butter));
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: .76rem;
+      font-style: normal;
+      line-height: 1;
+    }
+
+    .discovery {
+      grid-template-columns: minmax(230px, .74fr) minmax(0, 1.26fr);
+      gap: 18px 28px;
+      margin-bottom: 22px;
+      padding: 22px;
+    }
+
+    .discovery h2 {
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+    }
+
+    .site-shot {
+      width: min(100%, 310px);
+      justify-self: center;
+      padding: 7px 7px 24px;
+      background: #fffdf8;
+    }
+
+    .site-shot img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .site-shot figcaption {
+      padding: 7px 3px 0;
+      font-family: "Caveat", cursive;
+      font-size: .72rem;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .discovery .prose p {
+      margin-bottom: .62em;
+    }
+
+    .pull-quote {
+      margin-bottom: 12px;
+      font-size: clamp(1rem, 1.8vw, 1.22rem);
+    }
+
+    .shelf-reason {
+      margin-top: 14px;
+    }
+
+    .final-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 38px;
+      margin-bottom: 46px;
+    }
+
+    .final-grid .small-note,
+    .final-grid .library-card {
+      width: auto;
+      height: 100%;
+      margin: 0;
+      padding: 28px;
+    }
+
+    .final-grid .small-note,
+    .final-grid .library-card {
+      display: block;
+    }
+
+    .final-grid .small-note h2,
+    .final-grid .library-card h2 {
+      margin-bottom: 20px;
+      font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+    }
+
+    .final-grid .library-details div {
+      grid-template-columns: 128px 1fr;
+      gap: 10px;
+      padding: 7px 0;
+    }
+
+    .closing {
+      padding: 36px 0 42px;
+    }
+
+    .closing p {
+      font-size: clamp(1.4rem, 3vw, 2.05rem);
+    }
+
+    @media (max-width: 700px) {
+      .save-note {
+        display: none;
+      }
+
+      .manifesto,
+      .note-columns,
+      .discovery,
+      .final-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-shot {
+        width: min(100%, 420px);
+      }
+
+      .final-grid .library-details div {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -1086,15 +1293,18 @@
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="./" aria-label="Antes que eu esqueça — início">
+      <a class="brand" href="./" aria-label="antes que eu esqueça — início">
         <span class="brand-mark" aria-hidden="true">✦</span>
-        <span>antes que eu esqueça</span>
+        <strong class="project-name">antes que eu esqueça</strong>
       </a>
 
       <div class="header-actions">
-        <button class="header-button" id="printButton" type="button" aria-label="Salvar esta edição em PDF">
-          ↓ <span class="label">salvar</span>
-        </button>
+        <div class="save-wrap">
+          <button class="header-button" id="printButton" type="button" aria-label="Salvar esta edição em PDF">
+            ↓ <span class="label">salvar</span>
+          </button>
+          <span class="save-note">se quiser, pode baixar em PDF ;)</span>
+        </div>
         <button class="header-button share-trigger" type="button" aria-label="Compartilhar esta edição">
           ↗ <span class="label">compartilhar</span>
         </button>
@@ -1112,7 +1322,7 @@
     </section>
 
     <section class="shell manifesto" aria-label="Abertura">
-      <p class="manifesto-label">antes que eu esqueça:</p>
+      <p class="manifesto-label"><strong class="project-name">antes que eu esqueça:</strong></p>
       <p class="manifesto-copy">
         Uma internet menos preocupada em prender sua atenção e mais interessada em
         <span>despertar sua curiosidade.</span>
@@ -1120,36 +1330,29 @@
     </section>
 
     <aside class="note" aria-labelledby="before-title">
-      <h2 id="before-title">📌 Antes de começar...</h2>
-      <div class="prose">
-        <p>Resolvi criar uma regra para esta biblioteca.</p>
-
-        <p class="short pause">Nada entra aqui só porque alguém recomendou.</p>
-        <p class="short">Nem porque apareceu em uma lista.</p>
-        <p class="short">Nem porque uma IA achou incrível.</p>
-
-        <p class="short pause">Eu preciso abrir.</p>
-        <p class="short">Explorar.</p>
-        <p class="short">E decidir se aquilo realmente merece ocupar espaço na minha estante digital.</p>
-
-        <p class="pause">Aliás...</p>
-        <p>Logo no primeiro dia a IA já levou uma invertida. 😅</p>
-        <p>Ela encontrou um projeto que parecia maravilhoso.</p>
-        <p>Quando fui abrir...</p>
-        <p>Ele simplesmente não existia mais.</p>
-        <p>Isso também faz parte da curadoria.</p>
-        <p>Às vezes o guardado é justamente descobrir que um projeto bonito ficou pelo caminho.</p>
+      <h2 id="before-title"><span class="identity-icon" style="--icon-color: var(--tangerine);">✦</span>Antes de começar...</h2>
+      <div class="prose note-columns">
+        <div>
+          <p>Resolvi criar uma regra para esta biblioteca.</p>
+          <p><strong>Nada entra aqui só porque alguém recomendou. Nem porque apareceu em uma lista. Nem porque uma IA achou incrível.</strong></p>
+          <p>Eu preciso abrir, explorar e decidir se aquilo realmente merece ocupar espaço na minha estante digital.</p>
+        </div>
+        <div>
+          <p><strong>Aliás, logo no primeiro dia a IA já levou uma invertida.</strong></p>
+          <p>Ela encontrou um projeto que parecia maravilhoso. Quando fui abrir, ele simplesmente não existia mais.</p>
+          <p>Isso também faz parte da curadoria. Às vezes o guardado é justamente descobrir que um projeto bonito ficou pelo caminho.</p>
+        </div>
       </div>
     </aside>
 
     <article class="shell discovery" style="--accent: var(--matcha);" aria-labelledby="window-title">
       <header class="discovery-heading">
         <span class="discovery-index">01 / 03</span>
-        <h2 id="window-title">🌍 Window Swap</h2>
+        <h2 id="window-title"><span class="identity-icon" style="--icon-color: var(--matcha);">◎</span>Window Swap</h2>
       </header>
 
       <a class="site-url" href="https://www.window-swap.com/" target="_blank" rel="noopener noreferrer">
-        🔗 www.window-swap.com <span aria-hidden="true">↗</span>
+        www.window-swap.com <span aria-hidden="true">↗</span>
       </a>
 
       <figure class="site-shot">
@@ -1164,27 +1367,14 @@
         <blockquote class="pull-quote">“Abra a janela de alguém do outro lado do mundo.”</blockquote>
 
         <div class="prose">
-          <p>Foi exatamente isso que eu fiz.</p>
-          <p>Comecei viajando de janela em janela.</p>
+          <p>Foi exatamente isso que eu fiz. Comecei viajando de janela em janela: Japão, Canadá, Brasil e Itália.</p>
+          <p>Achei bonito. Muito bonito. Mas descobri outra coisa no caminho: eu não tenho muita paciência para contemplar.</p>
+          <p>Depois de alguns minutos eu já queria descobrir outra janela, outro bairro, outro lugar. E acho que isso diz mais sobre mim do que sobre o site.</p>
 
-          <p class="short pause">🏡 Japão.</p>
-          <p class="short">🌲 Canadá.</p>
-          <p class="short">🌊 Brasil.</p>
-          <p class="short">🏙️ Itália.</p>
-
-          <p class="pause">Achei bonito.</p>
-          <p>Muito bonito.</p>
-          <p>Mas descobri outra coisa no caminho.</p>
-          <p>Eu não tenho muita paciência para contemplar.</p>
-          <p>Depois de alguns minutos eu já queria descobrir outra janela.</p>
-          <p>Outro bairro.</p>
-          <p>Outro lugar.</p>
-          <p>E acho que isso diz mais sobre mim do que sobre o site.</p>
-
-          <p class="shelf-reason">📎 Entrou na biblioteca porque me fez descobrir uma coisa sobre mim.</p>
+          <p class="shelf-reason">Entrou na biblioteca porque me fez descobrir uma coisa sobre mim.</p>
           <div class="tags" aria-label="Etiquetas">
-            <span class="tag">🎨 Boniteza</span>
-            <span class="tag">🧠 Me fez pensar</span>
+            <span class="tag">✳ boniteza</span>
+            <span class="tag">◌ me fez pensar</span>
           </div>
         </div>
       </div>
@@ -1193,11 +1383,11 @@
     <article class="shell discovery discovery-radio" aria-labelledby="radio-title">
       <header class="discovery-heading">
         <span class="discovery-index">02 / 03</span>
-        <h2 id="radio-title">📻 Radio Garden</h2>
+        <h2 id="radio-title"><span class="identity-icon" style="--icon-color: var(--blush);">◉</span>Radio Garden</h2>
       </header>
 
       <a class="site-url" href="https://radio.garden/" target="_blank" rel="noopener noreferrer">
-        🔗 radio.garden <span aria-hidden="true">↗</span>
+        radio.garden <span aria-hidden="true">↗</span>
       </a>
 
       <figure class="site-shot">
@@ -1212,24 +1402,15 @@
         <blockquote class="pull-quote">Esse foi o meu favorito.</blockquote>
 
         <div class="prose">
-          <p>A proposta é simples.</p>
-          <p>Você gira um globo.</p>
-          <p>Escolhe uma cidade.</p>
-          <p>E escuta a rádio local naquele exato momento.</p>
-
-          <p class="pause">Achei que fosse prestar atenção nas músicas.</p>
-          <p>Mas acabei presa em outra coisa.</p>
-          <p>Os comerciais.</p>
-          <p>As vinhetas.</p>
-          <p>O jeito dos locutores.</p>
+          <p>A proposta é simples: você gira um globo, escolhe uma cidade e escuta a rádio local naquele exato momento.</p>
+          <p>Achei que fosse prestar atenção nas músicas, mas acabei presa em outra coisa: os comerciais, as vinhetas e o jeito dos locutores.</p>
           <p>Foi engraçado perceber que algumas rádios tinham exatamente a mesma energia das rádios brasileiras.</p>
-          <p>Nunca tinha pensado que rádio também tem sotaque.</p>
-          <p>E que esse sotaque vai muito além da língua.</p>
+          <p>Nunca tinha pensado que rádio também tem sotaque — e que esse sotaque vai muito além da língua.</p>
 
-          <p class="shelf-reason">📎 Esse ganhou um lugar permanente nos meus favoritos.</p>
+          <p class="shelf-reason">Esse ganhou um lugar permanente nos meus favoritos.</p>
           <div class="tags" aria-label="Etiquetas">
-            <span class="tag">❤️ Favoritado</span>
-            <span class="tag">🌎 Quero voltar</span>
+            <span class="tag">♡ favoritado</span>
+            <span class="tag">↻ quero voltar</span>
           </div>
         </div>
       </div>
@@ -1238,11 +1419,11 @@
     <article class="shell discovery discovery-sea" aria-labelledby="sea-title">
       <header class="discovery-heading">
         <span class="discovery-index">03 / 03</span>
-        <h2 id="sea-title">🌊 The Deep Sea</h2>
+        <h2 id="sea-title"><span class="identity-icon" style="--icon-color: var(--sea);">≈</span>The Deep Sea</h2>
       </header>
 
       <a class="site-url" href="https://neal.fun/deep-sea/" target="_blank" rel="noopener noreferrer">
-        🔗 neal.fun/deep-sea <span aria-hidden="true">↗</span>
+        neal.fun/deep-sea <span aria-hidden="true">↗</span>
       </a>
 
       <figure class="site-shot">
@@ -1257,79 +1438,73 @@
         <blockquote class="pull-quote">Você começa na superfície. E vai descendo.</blockquote>
 
         <div class="prose">
-          <p>Cada vez mais.</p>
-          <p>Até descobrir criaturas que parecem inventadas.</p>
-          <p>Gostei muito.</p>
-          <p>Mas minha cabeça automaticamente virou uma reunião de produto. 😂</p>
+          <p>Cada vez mais, até descobrir criaturas que parecem inventadas. Gostei muito.</p>
+          <p>Mas minha cabeça automaticamente virou uma reunião de produto.</p>
           <p>Fiquei imaginando como seria legal passar o mouse em cada animal e abrir pequenas curiosidades sem interromper a experiência.</p>
+          <p>Aliás, se você tem uma criança curiosa por perto, guarda esse link.</p>
 
-          <p class="pause">Aliás...</p>
-          <p>Se você tem uma criança curiosa por perto...</p>
-          <p>Guarda esse link.</p>
-
-          <p class="shelf-reason">📎 Entrou porque desperta perguntas.</p>
+          <p class="shelf-reason">Entrou porque desperta perguntas.</p>
           <div class="tags" aria-label="Etiquetas">
-            <span class="tag">🌊 Experiência</span>
-            <span class="tag">👧 Mostrar para alguém</span>
+            <span class="tag">≈ experiência</span>
+            <span class="tag">↗ mostrar para alguém</span>
           </div>
         </div>
       </div>
     </article>
 
-    <section class="shell small-note" aria-labelledby="small-note-title">
-      <h2 id="small-note-title">✏️ Pequena anotação</h2>
-      <div class="prose">
-        <p>Percebi uma coisa curiosa hoje.</p>
-        <p>Eu achei que estava testando sites.</p>
-        <p>Na verdade...</p>
-        <p>Eu estava descobrindo como gosto de explorar a internet.</p>
+    <div class="shell final-grid">
+      <section class="small-note" aria-labelledby="small-note-title">
+        <h2 id="small-note-title">
+          <span class="identity-icon" style="--icon-color: var(--butter);" aria-hidden="true">✎</span>
+          Pequena anotação
+        </h2>
+        <div class="prose">
+          <p>Percebi uma coisa curiosa hoje: achei que estava testando sites. Na verdade, estava descobrindo como gosto de explorar a internet.</p>
+          <p><strong>Menos contemplação. Mais exploração. Mais cliques. Mais “o que acontece se eu abrir isso?”.</strong></p>
+          <p>Talvez essa biblioteca seja exatamente isso: uma coleção de pequenas curiosidades que fizeram meu dia ficar um pouco mais interessante.</p>
+        </div>
+      </section>
 
-        <p class="short pause">Menos contemplação.</p>
-        <p class="short">Mais exploração.</p>
-        <p class="short">Mais cliques.</p>
-        <p class="short">Mais “o que acontece se eu abrir isso?”.</p>
+      <section class="library-card" aria-labelledby="library-title">
+        <h2 id="library-title">
+          <span class="identity-icon" style="--icon-color: var(--blush);" aria-hidden="true">▤</span>
+          Ficha da biblioteca
+        </h2>
 
-        <p class="pause">Talvez essa biblioteca seja exatamente isso.</p>
-        <p>Uma coleção de pequenas curiosidades que fizeram meu dia ficar um pouco mais interessante.</p>
-      </div>
-    </section>
-
-    <section class="shell library-card" aria-labelledby="library-title">
-      <h2 id="library-title">📚 Ficha da biblioteca</h2>
-
-      <dl class="library-details">
-        <div>
-          <dt>📅 Guardado em</dt>
-          <dd>26 de julho de 2026</dd>
-        </div>
-        <div>
-          <dt>📂 Gaveta</dt>
-          <dd>Bonitezas</dd>
-        </div>
-        <div>
-          <dt>☕ Tempo explorando</dt>
-          <dd>Aproximadamente 20 minutos</dd>
-        </div>
-        <div>
-          <dt>❤️ Favorito do dia</dt>
-          <dd>Radio Garden</dd>
-        </div>
-        <div>
-          <dt>🤖 IA passou vergonha hoje?</dt>
-          <dd>Sim.</dd>
-        </div>
-        <div>
-          <dt>📌 Entraram para a estante</dt>
-          <dd>
-            <ul class="shelf-list">
-              <li>🌍 Window Swap</li>
-              <li>📻 Radio Garden</li>
-              <li>🌊 The Deep Sea</li>
-            </ul>
-          </dd>
-        </div>
-      </dl>
-    </section>
+        <dl class="library-details">
+          <div>
+            <dt>Guardado em</dt>
+            <dd>26 de julho de 2026</dd>
+          </div>
+          <div>
+            <dt>Gaveta</dt>
+            <dd>Bonitezas</dd>
+          </div>
+          <div>
+            <dt>Tempo explorando</dt>
+            <dd>Aproximadamente 20 minutos</dd>
+          </div>
+          <div>
+            <dt>Favorito do dia</dt>
+            <dd>Radio Garden</dd>
+          </div>
+          <div>
+            <dt>IA passou vergonha hoje?</dt>
+            <dd>Sim.</dd>
+          </div>
+          <div>
+            <dt>Entraram para a estante</dt>
+            <dd>
+              <ul class="shelf-list">
+                <li>Window Swap</li>
+                <li>Radio Garden</li>
+                <li>The Deep Sea</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </div>
 
     <section class="shell closing" aria-label="Compartilhar">
       <p>Uma coisa boa não precisa parar <em>na mesma pessoa.</em></p>
@@ -1341,7 +1516,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <p class="footer-brand">antes que eu<em>esqueça.</em></p>
+      <p class="footer-brand"><strong class="project-name">antes que eu esqueça.</strong></p>
       <p class="footer-note">
         Curadoria e texto por Camis.<br>
         Uma biblioteca pessoal aberta, construída aos poucos e sem frequência neurótica.
@@ -1368,7 +1543,7 @@
 
       const shareEdition = async () => {
         const shareData = {
-          title: "Bonitezas #001 — Antes que eu esqueça",
+          title: "Bonitezas #001 — antes que eu esqueça",
           text: "Lugares da internet que me fizeram parar o que eu estava fazendo hoje.",
           url: window.location.href
         };
