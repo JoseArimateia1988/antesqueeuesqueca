@@ -1,47 +1,320 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Antes que eu esqueça</title><link rel="stylesheet" href="styles.css"></head>
-<body data-page="home">
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html">antes que eu esqueça</a>
-    <button class="menu-btn">menu</button>
-    <nav class="nav-links">
-      <a href="index.html#guardados">o que guardei</a>
-      <a href="index.html#gavetas">gavetas</a>
-      <a href="busca.html">buscar</a>
-      <a href="sobre.html">sobre</a>
-    </nav>
-  </div>
-</header>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Antes que eu esqueça: uma biblioteca pessoal aberta para guardar ideias, referências e descobertas que valem voltar.">
+  <meta name="theme-color" content="#F4EBDD">
+  <title>Antes que eu esqueça</title>
 
-<main>
-<section class="hero"><div class="container">
-  <div class="eyebrow">uma biblioteca pessoal aberta</div>
-  <h1>Deixa eu <span class="scribble">guardar</span> isso aqui.</h1>
-  <div class="hero-copy">
-    <p>Ideias, ferramentas, vídeos, conversas e pensamentos aleatórios que eu não queria deixar o algoritmo levar embora.</p>
-    <div class="note-sticker"><strong>antes que eu esqueça...</strong> isto aqui não é um portal de notícias. É um lugar para voltar depois.</div>
-  </div>
-  <form class="search-wrap" id="home-search"><input placeholder="procurar alguma coisa que guardei..."><button>buscar</button></form>
-</div></section>
-<section class="section" id="guardados"><div class="container">
-  <div class="section-title"><h2>Fui guardando...</h2><p>Não estão em ordem de importância. Talvez nem de lógica. Mas todos ficaram comigo por algum motivo.</p></div>
-  <div class="posts" id="posts"></div>
-</div></section>
-<section class="section" id="gavetas"><div class="container">
-  <div class="section-title"><h2>Guardei isso em</h2><p>Clique numa gaveta e veja onde as ideias foram se encontrando.</p></div>
-  <div class="drawer-grid" id="drawer-grid"></div>
-</div></section>
-<section class="section"><div class="container"><div class="manifesto">
-  <div class="eyebrow">o princípio da estante</div>
-  <h2>Se eu não voltaria nisso daqui a seis meses, talvez não precise entrar aqui.</h2>
-  <p>Este projeto existe para dar endereço às ideias que merecem mais tempo do que um scroll.</p>
-</div></div></section>
-</main>
-<footer class="footer">
-  <div class="container footer-row">
-    <strong>antes que eu esqueça</strong>
-    <span>um projeto camis.moodlabs ✦ 2026</span>
-  </div>
-</footer>
-<script src="data.js"></script><script src="app.js"></script></body></html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="paper-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Antes que eu esqueça, página inicial">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>antes que eu esqueça</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <a href="#guardados">guardados</a>
+        <a href="#gavetas">gavetas</a>
+        <a href="#sobre">sobre</a>
+        <a class="search-link" href="#buscar" aria-label="Buscar na biblioteca">
+          <span aria-hidden="true">⌕</span> buscar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero shell" aria-labelledby="titulo-principal">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>uma biblioteca pessoal aberta</span>
+        </div>
+
+        <h1 id="titulo-principal">
+          Coisas que eu não queria
+          <span class="highlight highlight-butter">deixar passar.</span>
+        </h1>
+
+        <p class="hero-intro">
+          Ideias, referências, ferramentas, livros, pessoas e pequenas descobertas
+          que mereciam um lugar melhor do que o fundo de uma aba esquecida.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#guardados">
+            começar a fuçar
+            <span aria-hidden="true">↘</span>
+          </a>
+          <a class="text-link" href="#sobre">entender este lugar</a>
+        </div>
+
+        <p class="margin-note note-1" aria-hidden="true">
+          deixa eu guardar<br>isso aqui.
+        </p>
+      </div>
+
+      <div class="hero-composition" aria-label="Composição editorial com anotações e recortes">
+        <div class="tape tape-orange tape-top" aria-hidden="true"></div>
+
+        <article class="feature-paper">
+          <div class="paper-kicker">último guardado</div>
+          <div class="feature-number">001</div>
+
+          <div class="feature-illustration" aria-hidden="true">
+            <div class="sun"></div>
+            <div class="window-frame">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="plant">
+              <i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <h2>Um lugar para voltar antes que tudo vire ruído</h2>
+          <p>
+            Sobre curiosidade, algoritmo e a vontade de escolher melhor
+            aquilo que fica.
+          </p>
+          <a href="#primeiro-guardado" class="feature-link">
+            abrir guardado <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <div class="sticky-note">
+          <span class="pin" aria-hidden="true"></span>
+          <strong>não é para dar conta de tudo.</strong>
+          <span>é para não perder o que importa.</span>
+        </div>
+
+        <div class="mini-label label-blue">arquivo vivo</div>
+        <div class="paperclip" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="guardados" class="latest shell section-space" aria-labelledby="ultimos-titulo">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">01</span>
+          <h2 id="ultimos-titulo">O que ficou comigo</h2>
+        </div>
+        <p>Os guardados mais recentes, ainda com cheiro de página aberta.</p>
+      </div>
+
+      <div class="editorial-list">
+        <article id="primeiro-guardado" class="saved-item saved-item-featured">
+          <a href="#" aria-label="Abrir: Um lugar para voltar antes que tudo vire ruído">
+            <div class="saved-meta">
+              <span class="category-chip chip-blush">comportamento</span>
+              <time datetime="2026-07-25">25 jul 2026</time>
+            </div>
+            <h3>Um lugar para voltar antes que tudo vire ruído</h3>
+            <p>
+              Não deixei de ser curiosa. Só percebi que estava escolhendo
+              cada vez menos o que entrava na minha cabeça.
+            </p>
+            <div class="saved-footer">
+              <span>6 min de leitura</span>
+              <span class="read-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="saved-item">
+          <a href="#gavetas" aria-label="Explorar gaveta: referências">
+            <div class="saved-meta">
+              <span class="category-chip chip-sea">referências</span>
+              <span>gaveta aberta</span>
+            </div>
+            <h3>Coisas boas para ler devagar</h3>
+            <p>Livros, ensaios e textos que pedem margem, marca-texto e retorno.</p>
+            <div class="saved-footer">
+              <span>ver gaveta</span>
+              <span class="read-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="saved-item">
+          <a href="#gavetas" aria-label="Explorar gaveta: ferramentas">
+            <div class="saved-meta">
+              <span class="category-chip chip-matcha">ferramentas</span>
+              <span>gaveta aberta</span>
+            </div>
+            <h3>Coisas que ajudam a pensar e fazer</h3>
+            <p>Processos, recursos e atalhos honestos para o trabalho e a vida.</p>
+            <div class="saved-footer">
+              <span>ver gaveta</span>
+              <span class="read-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="gavetas" class="drawers section-space" aria-labelledby="gavetas-titulo">
+      <div class="shell">
+        <div class="section-heading section-heading-light">
+          <div>
+            <span class="section-index">02</span>
+            <h2 id="gavetas-titulo">Escolha uma gaveta</h2>
+          </div>
+          <p>Não precisa seguir ordem. Abra a que fizer barulho primeiro.</p>
+        </div>
+
+        <div class="drawer-grid">
+          <a class="drawer drawer-blush" href="#">
+            <span class="drawer-tab">pessoas & comportamento</span>
+            <strong>O que ajuda a entender gente</strong>
+            <span>0 guardados</span>
+          </a>
+
+          <a class="drawer drawer-tangerine" href="#">
+            <span class="drawer-tab">descobertas</span>
+            <strong>Coisas que encontrei no caminho</strong>
+            <span>0 guardados</span>
+          </a>
+
+          <a class="drawer drawer-sea" href="#">
+            <span class="drawer-tab">livros & referências</span>
+            <strong>O que vale ler, rever e citar</strong>
+            <span>0 guardados</span>
+          </a>
+
+          <a class="drawer drawer-matcha" href="#">
+            <span class="drawer-tab">ferramentas & processos</span>
+            <strong>O que tornou alguma coisa possível</strong>
+            <span>0 guardados</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="weekly shell section-space" aria-labelledby="semana-titulo">
+      <div class="weekly-collage">
+        <div class="weekly-copy">
+          <span class="section-index">03</span>
+          <h2 id="semana-titulo">O que ficou comigo esta semana</h2>
+          <p>
+            Uma seleção pequena, porque o objetivo não é acumular.
+            É conseguir voltar.
+          </p>
+        </div>
+
+        <ol class="weekly-list">
+          <li>
+            <span class="list-number">01</span>
+            <div>
+              <strong>Uma frase</strong>
+              <p>“A curadoria começa quando a pressa termina.”</p>
+            </div>
+          </li>
+          <li>
+            <span class="list-number">02</span>
+            <div>
+              <strong>Uma pergunta</strong>
+              <p>O que você escolheria aprender se o algoritmo não escolhesse por você?</p>
+            </div>
+          </li>
+          <li>
+            <span class="list-number">03</span>
+            <div>
+              <strong>Uma decisão</strong>
+              <p>Guardar menos. Voltar mais.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="tape tape-blue tape-weekly" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="buscar" class="search-section section-space" aria-labelledby="buscar-titulo">
+      <div class="shell search-paper">
+        <div>
+          <span class="section-index">04</span>
+          <h2 id="buscar-titulo">Procure pela lembrança, não pela categoria.</h2>
+          <p>
+            Uma palavra, uma ideia, uma coisa que você quase lembra.
+          </p>
+        </div>
+
+        <form class="search-form" action="#" method="get" role="search">
+          <label class="sr-only" for="busca">Buscar na biblioteca</label>
+          <input id="busca" name="q" type="search" placeholder="ex.: algoritmo, criatividade, livro..." autocomplete="off">
+          <button type="submit" aria-label="Buscar">
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="sobre" class="about shell section-space" aria-labelledby="sobre-titulo">
+      <div class="about-stamp" aria-hidden="true">
+        <span>arquivo</span>
+        <strong>aberto</strong>
+        <small>desde 2026</small>
+      </div>
+
+      <div class="about-copy">
+        <span class="section-index">05</span>
+        <h2 id="sobre-titulo">Uma biblioteca feita por alguém que vive abrindo abas.</h2>
+        <p>
+          O <strong>Antes que eu esqueça</strong> nasceu da vontade de voltar a escolher
+          o que merece atenção. Aqui, Camis guarda aquilo que ensinou alguma coisa,
+          mudou uma ideia de lugar ou simplesmente foi bom demais para desaparecer
+          no fluxo.
+        </p>
+        <p>
+          Não é uma promessa de atualização perfeita. É um arquivo vivo,
+          construído aos poucos e aberto para quem também gosta de fuçar.
+        </p>
+        <a class="text-link" href="#">ler mais sobre este lugar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <a class="brand brand-footer" href="/">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>antes que eu esqueça</span>
+        </a>
+        <p>Uma biblioteca pessoal aberta.</p>
+      </div>
+
+      <div class="footer-note">
+        <span>feito para voltar</span>
+        <span aria-hidden="true">↙</span>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <a href="#guardados">guardados</a>
+        <a href="#gavetas">gavetas</a>
+        <a href="#sobre">sobre</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
