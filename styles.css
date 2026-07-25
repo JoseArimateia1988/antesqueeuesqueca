@@ -1101,3 +1101,169 @@ img {
     transition: none !important;
   }
 }
+
+/* Ajuste de escala editorial: versão mais compacta e próxima da referência */
+@media (min-width: 761px) {
+  :root {
+    --shell: min(1080px, calc(100% - 56px));
+  }
+
+  .header-inner {
+    min-height: 66px;
+  }
+
+  .brand {
+    font-size: 1.05rem;
+  }
+
+  .main-nav {
+    gap: 22px;
+    font-size: .82rem;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1.02fr .98fr;
+    gap: 54px;
+    padding-block: 54px 68px;
+  }
+
+  .hero h1 {
+    max-width: 620px;
+    font-size: clamp(3rem, 5vw, 4.9rem);
+    line-height: 1.02;
+  }
+
+  .hero-intro {
+    max-width: 520px;
+    margin-top: 22px;
+    font-size: 1.02rem;
+  }
+
+  .hero-actions {
+    margin-top: 28px;
+  }
+
+  .margin-note {
+    margin-top: 28px;
+  }
+
+  .hero-composition {
+    min-height: 490px;
+  }
+
+  .feature-paper {
+    inset: 24px 38px 58px 28px;
+    padding: 34px;
+  }
+
+  .feature-illustration {
+    height: 148px;
+    margin: 24px 0 20px;
+  }
+
+  .feature-paper h2 {
+    max-width: 380px;
+    font-size: clamp(1.75rem, 2.4vw, 2.45rem);
+  }
+
+  .feature-paper p {
+    margin: 14px 0 18px;
+    font-size: .94rem;
+  }
+
+  .sticky-note {
+    width: 180px;
+    padding: 26px 20px 20px;
+    font-size: .74rem;
+  }
+
+  .section-space {
+    padding-block: 82px;
+  }
+
+  .section-heading h2,
+  .weekly h2,
+  .about h2,
+  .search-paper h2 {
+    font-size: clamp(2.1rem, 3.7vw, 3.6rem);
+  }
+
+  .section-heading {
+    gap: 28px;
+    padding-bottom: 22px;
+  }
+
+  .editorial-list {
+    grid-template-columns: 1.25fr 1fr 1fr;
+  }
+
+  .saved-item {
+    min-height: 300px;
+  }
+
+  .saved-item a {
+    padding: 26px;
+  }
+
+  .saved-item h3 {
+    margin: 40px 0 12px;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+  }
+
+  .saved-item p {
+    font-size: .92rem;
+  }
+
+  .saved-footer {
+    padding-top: 30px;
+  }
+
+  .drawer-grid {
+    gap: 14px;
+  }
+
+  .drawer {
+    min-height: 210px;
+    padding: 30px;
+  }
+
+  .drawer-tab {
+    margin-bottom: 38px;
+  }
+
+  .drawer strong {
+    max-width: 360px;
+    font-size: clamp(1.7rem, 2.8vw, 2.55rem);
+  }
+
+  .weekly-collage {
+    gap: 48px;
+    padding: 50px;
+  }
+
+  .weekly-list li {
+    padding: 18px 0;
+  }
+
+  .weekly-list p {
+    font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  }
+
+  .search-paper {
+    gap: 44px;
+    padding: 48px 52px;
+  }
+
+  .about {
+    gap: 58px;
+  }
+
+  .about-stamp {
+    width: 220px;
+  }
+
+  .about-copy p {
+    font-size: 1rem;
+  }
+}
