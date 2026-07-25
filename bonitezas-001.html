@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4ebdd">
+  <meta name="description" content="Bonitezas #001 — lugares da internet que me fizeram parar o que eu estava fazendo hoje.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Bonitezas #001 — Antes que eu esqueça">
+  <meta property="og:description" content="Lugares da internet que me fizeram parar o que eu estava fazendo hoje.">
+  <title>Bonitezas #001 — Antes que eu esqueça</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f4ebdd;
+      --paper-light: #fbf6ee;
+      --ink: #25263a;
+      --ink-soft: #5f5c68;
+      --blush: #e36888;
+      --tangerine: #f08c21;
+      --butter: #f2d88f;
+      --sea: #6698cc;
+      --matcha: #b4b534;
+      --line: rgba(37, 38, 58, .18);
+      --shadow: 0 24px 60px rgba(68, 48, 35, .12);
+      --shell: min(1080px, calc(100% - 56px));
+      --text-column: min(720px, 100%);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, .62), transparent 28rem),
+        var(--paper);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      opacity: .3;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(37, 38, 58, .022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 38, 58, .018) 1px, transparent 1px);
+      background-size: 5px 5px;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--sea);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      transform: translateY(-160%);
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .paper-noise {
+      position: fixed;
+      z-index: 999;
+      inset: 0;
+      opacity: .05;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
+    }
+
+    .progress {
+      position: fixed;
+      z-index: 1100;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--tangerine);
+    }
+
+    .shell {
+      width: var(--shell);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      border-bottom: 1px solid rgba(37, 38, 58, .09);
+      background: rgba(244, 235, 221, .88);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 66px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Fraunces", serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 28px;
+      aspect-ratio: 1;
+      place-items: center;
+      transform: rotate(-8deg);
+      border-radius: 50% 42% 50% 45%;
+      background: var(--butter);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header-button {
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .26);
+      color: var(--ink);
+      cursor: pointer;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .header-button:hover {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper-light);
+    }
+
+    .hero {
+      padding: clamp(44px, 6vw, 66px) 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-name {
+      display: flex;
+      align-items: baseline;
+      gap: clamp(14px, 2.4vw, 28px);
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: clamp(4rem, 8vw, 6.4rem);
+      font-weight: 700;
+      letter-spacing: -.055em;
+      line-height: .88;
+    }
+
+    h1 em {
+      color: var(--blush);
+      font-style: normal;
+    }
+
+    .issue-number {
+      padding-left: 16px;
+      transform: rotate(-2deg);
+      border-left: 1px solid var(--ink);
+      color: var(--blush);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.65rem, 3.3vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -.03em;
+      line-height: 1.08;
+    }
+
+    .manifesto {
+      display: grid;
+      grid-template-columns: .52fr 1.48fr;
+      gap: clamp(32px, 8vw, 100px);
+      padding: 42px 0 76px;
+    }
+
+    .manifesto-label {
+      margin: 6px 0 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .manifesto-copy {
+      max-width: 760px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.35rem, 2.7vw, 2.15rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.22;
+    }
+
+    .manifesto-copy span {
+      position: relative;
+      z-index: 0;
+      color: var(--ink);
+    }
+
+    .manifesto-copy span::before {
+      position: absolute;
+      z-index: -1;
+      right: -.06em;
+      bottom: .06em;
+      left: -.06em;
+      height: .32em;
+      transform: rotate(-1deg);
+      background: var(--butter);
+      content: "";
+    }
+
+    .note {
+      position: relative;
+      width: min(820px, calc(100% - 24px));
+      margin: 0 auto 100px;
+      padding: clamp(30px, 5vw, 60px);
+      transform: rotate(.35deg);
+      border: 1px solid var(--ink);
+      background:
+        linear-gradient(rgba(37, 38, 58, .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 38, 58, .055) 1px, transparent 1px),
+        var(--paper-light);
+      background-size: 28px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .note::before {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      width: 112px;
+      height: 27px;
+      transform: translateX(-50%) rotate(-3deg);
+      background: rgba(240, 140, 33, .78);
+      content: "";
+    }
+
+    .note h2,
+    .small-note h2,
+    .library-card h2 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      letter-spacing: -.035em;
+      line-height: 1;
+    }
+
+    .note h2 {
+      margin-bottom: 34px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+    }
+
+    .prose {
+      width: var(--text-column);
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+    }
+
+    .prose p {
+      margin: 0 0 1.05em;
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .prose .short {
+      margin-bottom: .22em;
+      color: var(--ink);
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.24rem, 2.4vw, 1.72rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .prose .pause {
+      margin-top: 1.65em;
+    }
+
+    .discovery {
+      --accent: var(--sea);
+      padding: 0 0 112px;
+    }
+
+    .discovery-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      padding: 0 0 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .discovery-index {
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .72rem;
+      letter-spacing: .1em;
+    }
+
+    .discovery h2 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: .95;
+    }
+
+    .site-url {
+      display: inline-flex;
+      margin: 18px 0 26px;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid currentColor;
+      color: var(--ink-soft);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .72rem;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .site-url:hover {
+      color: var(--accent);
+    }
+
+    .site-shot {
+      position: relative;
+      margin-bottom: 42px;
+      padding: 12px;
+      transform: rotate(-.4deg);
+      border: 1px solid var(--ink);
+      background: var(--paper-light);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .site-shot img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .site-shot figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 2px 0;
+      color: var(--ink-soft);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .64rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .discovery-content {
+      display: grid;
+      grid-template-columns: .52fr 1.48fr;
+      gap: clamp(32px, 8vw, 100px);
+    }
+
+    .pull-quote {
+      margin: 0;
+      padding-left: 18px;
+      border-left: 3px solid var(--accent);
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.15;
+    }
+
+    .shelf-reason {
+      margin-top: 32px;
+      padding: 18px 20px;
+      transform: rotate(-.4deg);
+      border: 1px solid var(--ink);
+      background: var(--accent);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .78rem;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border: 1px solid var(--ink);
+      background: var(--paper-light);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .67rem;
+    }
+
+    .discovery-radio {
+      --accent: var(--blush);
+    }
+
+    .discovery-sea {
+      --accent: var(--sea);
+    }
+
+    .discovery-radio .site-shot {
+      transform: rotate(.45deg);
+    }
+
+    .small-note {
+      display: grid;
+      grid-template-columns: .62fr 1.38fr;
+      gap: clamp(32px, 8vw, 90px);
+      margin-bottom: 100px;
+      padding: clamp(34px, 6vw, 64px);
+      border: 1px solid var(--ink);
+      background: var(--butter);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .small-note h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+    }
+
+    .small-note .prose {
+      color: var(--ink);
+    }
+
+    .library-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(34px, 7vw, 80px);
+      margin-bottom: 110px;
+      padding: clamp(36px, 6vw, 72px);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .22);
+      background: var(--ink);
+      color: var(--paper-light);
+    }
+
+    .library-card::after {
+      position: absolute;
+      right: -56px;
+      bottom: -82px;
+      width: 240px;
+      aspect-ratio: 1;
+      transform: rotate(-8deg);
+      border: 3px double var(--blush);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .library-card h2 {
+      color: var(--butter);
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+    }
+
+    .library-details {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 0;
+      margin: 0;
+    }
+
+    .library-details div {
+      display: grid;
+      grid-template-columns: minmax(145px, .6fr) 1.4fr;
+      gap: 18px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .library-details div:first-child {
+      padding-top: 0;
+    }
+
+    .library-details div:last-child {
+      border-bottom: 0;
+    }
+
+    .library-details dt {
+      color: rgba(251, 246, 238, .62);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .7rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .library-details dd {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .shelf-list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .shelf-list li + li {
+      margin-top: 6px;
+    }
+
+    .closing {
+      padding: 72px 0 84px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .closing p {
+      margin: 0 0 28px;
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: .95;
+    }
+
+    .closing p em {
+      color: var(--blush);
+      font-style: normal;
+    }
+
+    .share-button {
+      display: inline-flex;
+      min-height: 50px;
+      padding: 0 18px;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--ink);
+      background: var(--tangerine);
+      color: var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .share-button:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .site-footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--line);
+      background: #dad0bf;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: .9;
+    }
+
+    .footer-brand em {
+      display: block;
+      color: var(--blush);
+      font-style: normal;
+    }
+
+    .footer-note {
+      max-width: 340px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: .78rem;
+      text-align: right;
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 1200;
+      bottom: 22px;
+      left: 50%;
+      max-width: calc(100% - 32px);
+      padding: 11px 16px;
+      transform: translate(-50%, 24px);
+      background: var(--ink);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .toast.is-visible {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --shell: min(100% - 28px, 1080px);
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .header-button .label {
+        display: none;
+      }
+
+      .header-button {
+        width: 38px;
+        padding: 0;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .section-name {
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: clamp(3.5rem, 17vw, 5rem);
+      }
+
+      .issue-number {
+        padding-left: 10px;
+        font-size: 1rem;
+      }
+
+      .manifesto,
+      .discovery-content,
+      .small-note,
+      .library-card {
+        grid-template-columns: 1fr;
+      }
+
+      .manifesto {
+        gap: 16px;
+        padding: 30px 0 58px;
+      }
+
+      .note {
+        margin-bottom: 76px;
+      }
+
+      .discovery {
+        padding-bottom: 84px;
+      }
+
+      .discovery-heading {
+        display: block;
+      }
+
+      .discovery-index {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .site-shot {
+        margin-bottom: 34px;
+        padding: 7px;
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+
+      .site-shot figcaption {
+        display: block;
+      }
+
+      .site-shot figcaption span:last-child {
+        display: block;
+        margin-top: 4px;
+      }
+
+      .pull-quote {
+        margin-bottom: 24px;
+      }
+
+      .small-note,
+      .library-card {
+        gap: 30px;
+        margin-bottom: 76px;
+      }
+
+      .library-details div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-note {
+        margin-top: 26px;
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      .progress,
+      .header-actions,
+      .share-button,
+      .toast {
+        display: none !important;
+      }
+
+      .site-header {
+        position: static;
+      }
+
+      .site-shot,
+      .note,
+      .small-note,
+      .library-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Antes que eu esqueça — início">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>antes que eu esqueça</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="header-button" id="printButton" type="button" aria-label="Salvar esta edição em PDF">
+          ↓ <span class="label">salvar</span>
+        </button>
+        <button class="header-button share-trigger" type="button" aria-label="Compartilhar esta edição">
+          ↗ <span class="label">compartilhar</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="shell hero" aria-labelledby="page-title">
+      <div class="section-name">
+        <h1 id="page-title">Boni<em>tezas</em></h1>
+        <span class="issue-number">#001</span>
+      </div>
+      <p class="hero-subtitle">Lugares da internet que me fizeram parar o que eu estava fazendo hoje.</p>
+    </section>
+
+    <section class="shell manifesto" aria-label="Abertura">
+      <p class="manifesto-label">antes que eu esqueça:</p>
+      <p class="manifesto-copy">
+        Uma internet menos preocupada em prender sua atenção e mais interessada em
+        <span>despertar sua curiosidade.</span>
+      </p>
+    </section>
+
+    <aside class="note" aria-labelledby="before-title">
+      <h2 id="before-title">📌 Antes de começar...</h2>
+      <div class="prose">
+        <p>Resolvi criar uma regra para esta biblioteca.</p>
+
+        <p class="short pause">Nada entra aqui só porque alguém recomendou.</p>
+        <p class="short">Nem porque apareceu em uma lista.</p>
+        <p class="short">Nem porque uma IA achou incrível.</p>
+
+        <p class="short pause">Eu preciso abrir.</p>
+        <p class="short">Explorar.</p>
+        <p class="short">E decidir se aquilo realmente merece ocupar espaço na minha estante digital.</p>
+
+        <p class="pause">Aliás...</p>
+        <p>Logo no primeiro dia a IA já levou uma invertida. 😅</p>
+        <p>Ela encontrou um projeto que parecia maravilhoso.</p>
+        <p>Quando fui abrir...</p>
+        <p>Ele simplesmente não existia mais.</p>
+        <p>Isso também faz parte da curadoria.</p>
+        <p>Às vezes o guardado é justamente descobrir que um projeto bonito ficou pelo caminho.</p>
+      </div>
+    </aside>
+
+    <article class="shell discovery" style="--accent: var(--matcha);" aria-labelledby="window-title">
+      <header class="discovery-heading">
+        <span class="discovery-index">01 / 03</span>
+        <h2 id="window-title">🌍 Window Swap</h2>
+      </header>
+
+      <a class="site-url" href="https://www.window-swap.com/" target="_blank" rel="noopener noreferrer">
+        🔗 www.window-swap.com <span aria-hidden="true">↗</span>
+      </a>
+
+      <figure class="site-shot">
+        <img src="assets/bonitezas-001/window-swap.jpg" alt="Tela inicial do Window Swap com o convite para abrir uma janela em algum lugar do mundo" width="1362" height="940">
+        <figcaption>
+          <span>captura da experiência</span>
+          <span>window swap · 26 jul 2026</span>
+        </figcaption>
+      </figure>
+
+      <div class="discovery-content">
+        <blockquote class="pull-quote">“Abra a janela de alguém do outro lado do mundo.”</blockquote>
+
+        <div class="prose">
+          <p>Foi exatamente isso que eu fiz.</p>
+          <p>Comecei viajando de janela em janela.</p>
+
+          <p class="short pause">🏡 Japão.</p>
+          <p class="short">🌲 Canadá.</p>
+          <p class="short">🌊 Brasil.</p>
+          <p class="short">🏙️ Itália.</p>
+
+          <p class="pause">Achei bonito.</p>
+          <p>Muito bonito.</p>
+          <p>Mas descobri outra coisa no caminho.</p>
+          <p>Eu não tenho muita paciência para contemplar.</p>
+          <p>Depois de alguns minutos eu já queria descobrir outra janela.</p>
+          <p>Outro bairro.</p>
+          <p>Outro lugar.</p>
+          <p>E acho que isso diz mais sobre mim do que sobre o site.</p>
+
+          <p class="shelf-reason">📎 Entrou na biblioteca porque me fez descobrir uma coisa sobre mim.</p>
+          <div class="tags" aria-label="Etiquetas">
+            <span class="tag">🎨 Boniteza</span>
+            <span class="tag">🧠 Me fez pensar</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="shell discovery discovery-radio" aria-labelledby="radio-title">
+      <header class="discovery-heading">
+        <span class="discovery-index">02 / 03</span>
+        <h2 id="radio-title">📻 Radio Garden</h2>
+      </header>
+
+      <a class="site-url" href="https://radio.garden/" target="_blank" rel="noopener noreferrer">
+        🔗 radio.garden <span aria-hidden="true">↗</span>
+      </a>
+
+      <figure class="site-shot">
+        <img src="assets/bonitezas-001/radio-garden.jpg" alt="Radio Garden aberto em uma rádio de São Paulo, com o globo interativo ao fundo" width="1362" height="940">
+        <figcaption>
+          <span>captura da experiência</span>
+          <span>radio garden · 26 jul 2026</span>
+        </figcaption>
+      </figure>
+
+      <div class="discovery-content">
+        <blockquote class="pull-quote">Esse foi o meu favorito.</blockquote>
+
+        <div class="prose">
+          <p>A proposta é simples.</p>
+          <p>Você gira um globo.</p>
+          <p>Escolhe uma cidade.</p>
+          <p>E escuta a rádio local naquele exato momento.</p>
+
+          <p class="pause">Achei que fosse prestar atenção nas músicas.</p>
+          <p>Mas acabei presa em outra coisa.</p>
+          <p>Os comerciais.</p>
+          <p>As vinhetas.</p>
+          <p>O jeito dos locutores.</p>
+          <p>Foi engraçado perceber que algumas rádios tinham exatamente a mesma energia das rádios brasileiras.</p>
+          <p>Nunca tinha pensado que rádio também tem sotaque.</p>
+          <p>E que esse sotaque vai muito além da língua.</p>
+
+          <p class="shelf-reason">📎 Esse ganhou um lugar permanente nos meus favoritos.</p>
+          <div class="tags" aria-label="Etiquetas">
+            <span class="tag">❤️ Favoritado</span>
+            <span class="tag">🌎 Quero voltar</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="shell discovery discovery-sea" aria-labelledby="sea-title">
+      <header class="discovery-heading">
+        <span class="discovery-index">03 / 03</span>
+        <h2 id="sea-title">🌊 The Deep Sea</h2>
+      </header>
+
+      <a class="site-url" href="https://neal.fun/deep-sea/" target="_blank" rel="noopener noreferrer">
+        🔗 neal.fun/deep-sea <span aria-hidden="true">↗</span>
+      </a>
+
+      <figure class="site-shot">
+        <img src="assets/bonitezas-001/the-deep-sea.jpg" alt="Abertura do projeto The Deep Sea, com o título sobre a superfície do oceano" width="887" height="516">
+        <figcaption>
+          <span>captura arquivada da experiência</span>
+          <span>the deep sea · neal agarwal</span>
+        </figcaption>
+      </figure>
+
+      <div class="discovery-content">
+        <blockquote class="pull-quote">Você começa na superfície. E vai descendo.</blockquote>
+
+        <div class="prose">
+          <p>Cada vez mais.</p>
+          <p>Até descobrir criaturas que parecem inventadas.</p>
+          <p>Gostei muito.</p>
+          <p>Mas minha cabeça automaticamente virou uma reunião de produto. 😂</p>
+          <p>Fiquei imaginando como seria legal passar o mouse em cada animal e abrir pequenas curiosidades sem interromper a experiência.</p>
+
+          <p class="pause">Aliás...</p>
+          <p>Se você tem uma criança curiosa por perto...</p>
+          <p>Guarda esse link.</p>
+
+          <p class="shelf-reason">📎 Entrou porque desperta perguntas.</p>
+          <div class="tags" aria-label="Etiquetas">
+            <span class="tag">🌊 Experiência</span>
+            <span class="tag">👧 Mostrar para alguém</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="shell small-note" aria-labelledby="small-note-title">
+      <h2 id="small-note-title">✏️ Pequena anotação</h2>
+      <div class="prose">
+        <p>Percebi uma coisa curiosa hoje.</p>
+        <p>Eu achei que estava testando sites.</p>
+        <p>Na verdade...</p>
+        <p>Eu estava descobrindo como gosto de explorar a internet.</p>
+
+        <p class="short pause">Menos contemplação.</p>
+        <p class="short">Mais exploração.</p>
+        <p class="short">Mais cliques.</p>
+        <p class="short">Mais “o que acontece se eu abrir isso?”.</p>
+
+        <p class="pause">Talvez essa biblioteca seja exatamente isso.</p>
+        <p>Uma coleção de pequenas curiosidades que fizeram meu dia ficar um pouco mais interessante.</p>
+      </div>
+    </section>
+
+    <section class="shell library-card" aria-labelledby="library-title">
+      <h2 id="library-title">📚 Ficha da biblioteca</h2>
+
+      <dl class="library-details">
+        <div>
+          <dt>📅 Guardado em</dt>
+          <dd>26 de julho de 2026</dd>
+        </div>
+        <div>
+          <dt>📂 Gaveta</dt>
+          <dd>Bonitezas</dd>
+        </div>
+        <div>
+          <dt>☕ Tempo explorando</dt>
+          <dd>Aproximadamente 20 minutos</dd>
+        </div>
+        <div>
+          <dt>❤️ Favorito do dia</dt>
+          <dd>Radio Garden</dd>
+        </div>
+        <div>
+          <dt>🤖 IA passou vergonha hoje?</dt>
+          <dd>Sim.</dd>
+        </div>
+        <div>
+          <dt>📌 Entraram para a estante</dt>
+          <dd>
+            <ul class="shelf-list">
+              <li>🌍 Window Swap</li>
+              <li>📻 Radio Garden</li>
+              <li>🌊 The Deep Sea</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="shell closing" aria-label="Compartilhar">
+      <p>Uma coisa boa não precisa parar <em>na mesma pessoa.</em></p>
+      <button class="share-button share-trigger" type="button">
+        ↗ compartilhar Bonitezas #001
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-brand">antes que eu<em>esqueça.</em></p>
+      <p class="footer-note">
+        Curadoria e texto por Camis.<br>
+        Uma biblioteca pessoal aberta, construída aos poucos e sem frequência neurótica.
+      </p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const progress = document.querySelector(".progress");
+      const toast = document.querySelector(".toast");
+      let toastTimer;
+
+      const showToast = (message) => {
+        clearTimeout(toastTimer);
+        toast.textContent = message;
+        toast.classList.add("is-visible");
+        toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+      };
+
+      const shareEdition = async () => {
+        const shareData = {
+          title: "Bonitezas #001 — Antes que eu esqueça",
+          text: "Lugares da internet que me fizeram parar o que eu estava fazendo hoje.",
+          url: window.location.href
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast("Link copiado. Agora é só passar adiante.");
+          }
+        } catch (error) {
+          if (error && error.name !== "AbortError") {
+            showToast("Não consegui compartilhar por aqui.");
+          }
+        }
+      };
+
+      document.querySelectorAll(".share-trigger").forEach((button) => {
+        button.addEventListener("click", shareEdition);
+      });
+
+      document.querySelector("#printButton").addEventListener("click", () => window.print());
+
+      const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+      };
+
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
