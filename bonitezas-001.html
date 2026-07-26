@@ -1097,21 +1097,25 @@
 
     .save-note {
       position: absolute;
-      top: 48px;
-      right: -2px;
-      width: 205px;
+      top: calc(100% + 12px);
+      left: 50%;
+      width: 184px;
       color: var(--blush);
       font-family: "Caveat", cursive;
-      font-size: 1.12rem;
+      font-size: 1.08rem;
       font-weight: 600;
-      line-height: .95;
-      text-align: right;
-      transform: rotate(-1.5deg);
+      line-height: 1.05;
+      text-align: center;
+      transform: translateX(-50%) rotate(-1deg);
       pointer-events: none;
     }
 
     .save-note::before {
-      margin-right: 5px;
+      position: absolute;
+      top: -20px;
+      left: 24px;
+      font-family: "Caveat", cursive;
+      font-size: 1.25rem;
       content: "↖";
     }
 
@@ -1141,9 +1145,9 @@
     }
 
     .note {
-      width: min(860px, calc(100% - 14px));
+      width: var(--shell);
       margin-bottom: 40px;
-      padding: 27px 32px;
+      padding: 30px 36px 32px;
     }
 
     .note h2 {
@@ -1154,11 +1158,16 @@
     .note-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 34px;
+      gap: 48px;
     }
 
     .note-columns p {
       margin: 0 0 .72em;
+    }
+
+    .note-columns .lead {
+      font-family: "Special Elite", monospace;
+      font-size: 1.04em;
     }
 
     .identity-icon {
@@ -1190,7 +1199,9 @@
     }
 
     .site-shot {
-      width: min(100%, 310px);
+      width: min(100%, 340px);
+      height: auto;
+      align-self: start;
       justify-self: center;
       padding: 7px 7px 24px;
       background: #fffdf8;
@@ -1198,8 +1209,9 @@
 
     .site-shot img {
       width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: contain;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
       object-position: top;
       background: var(--ink);
     }
@@ -1374,12 +1386,12 @@
       <h2 id="before-title"><span class="identity-icon" style="--icon-color: var(--tangerine);">✦</span>Antes de começar...</h2>
       <div class="prose note-columns">
         <div>
-          <p>Resolvi criar uma regra para esta biblioteca.</p>
+          <p class="lead">Resolvi criar uma regra para esta biblioteca.</p>
           <p><strong>Nada entra aqui só porque alguém recomendou. Nem porque apareceu em uma lista. Nem porque uma IA achou incrível.</strong></p>
           <p>Eu preciso abrir, explorar e decidir se aquilo realmente merece ocupar espaço na minha estante digital.</p>
         </div>
         <div>
-          <p><strong>Aliás, logo no primeiro dia a IA já levou uma invertida.</strong></p>
+          <p class="lead"><strong>Aliás, logo no primeiro dia a IA já levou uma invertida.</strong></p>
           <p>Ela encontrou um projeto que parecia maravilhoso. Quando fui abrir, ele simplesmente não existia mais.</p>
           <p>Isso também faz parte da curadoria. Às vezes o guardado é justamente descobrir que um projeto bonito ficou pelo caminho.</p>
         </div>
