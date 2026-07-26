@@ -131,11 +131,12 @@
     .brand::after {
       position: absolute;
       right: 16px;
-      bottom: -20px;
+      bottom: -24px;
       content: "deixa eu guardar isso aqui.";
       color: var(--ink-soft);
       font-family: var(--hand);
-      font-size: .82rem;
+      font-size: 1.02rem;
+      font-weight: 600;
       white-space: nowrap;
     }
 
@@ -188,17 +189,17 @@
 
     .hero {
       display: grid;
-      grid-template-columns: .58fr 1.42fr;
-      gap: 34px;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 42px;
       align-items: center;
-      padding: 30px 16px 18px;
+      padding: 42px 16px 22px;
     }
 
     .hero-copy h1 {
-      max-width: 420px;
+      max-width: 520px;
       margin: 0;
       font-family: var(--type);
-      font-size: clamp(1.55rem, 2.5vw, 2.18rem);
+      font-size: clamp(1.5rem, 2.15vw, 2rem);
       font-weight: 400;
       letter-spacing: -.025em;
       line-height: 1.2;
@@ -223,7 +224,7 @@
     }
 
     .hero-copy > p {
-      max-width: 390px;
+      max-width: 470px;
       margin: 14px 0 0;
       color: var(--ink-soft);
       font-size: .82rem;
@@ -242,10 +243,10 @@
 
     .desk {
       position: relative;
-      min-height: 276px;
+      min-height: 350px;
       overflow: hidden;
       border: 1px solid rgba(37, 38, 58, .14);
-      border-radius: 22px;
+      border-radius: 15px;
       background:
         linear-gradient(rgba(37, 38, 58, .045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(37, 38, 58, .04) 1px, transparent 1px),
@@ -256,10 +257,10 @@
 
     .desk::before {
       position: absolute;
-      top: 18px;
-      left: 24px;
-      width: 74px;
-      height: 74px;
+      top: 22px;
+      left: 28px;
+      width: 82px;
+      height: 82px;
       border: 12px solid #a78665;
       border-radius: 50%;
       background: #2e251d;
@@ -269,10 +270,10 @@
 
     .desk-title {
       position: absolute;
-      top: 24px;
-      left: 126px;
+      top: 30px;
+      left: 138px;
       font-family: var(--hand);
-      font-size: 1.15rem;
+      font-size: 1.38rem;
       transform: rotate(-2deg);
     }
 
@@ -300,18 +301,18 @@
     }
 
     .polaroid-main {
-      top: 50px;
-      right: 30px;
-      width: 43%;
-      height: 158px;
+      top: 54px;
+      right: 28px;
+      width: 48%;
+      height: 220px;
       transform: rotate(3deg);
     }
 
     .polaroid-small {
-      bottom: 22px;
-      left: 36px;
-      width: 34%;
-      height: 122px;
+      bottom: 25px;
+      left: 42px;
+      width: 39%;
+      height: 166px;
       transform: rotate(-4deg);
     }
 
@@ -324,13 +325,13 @@
     }
 
     .tape-one {
-      top: 42px;
+      top: 46px;
       right: 24%;
       transform: rotate(-4deg);
     }
 
     .tape-two {
-      bottom: 130px;
+      bottom: 176px;
       left: 15%;
       transform: rotate(5deg);
       background: rgba(227, 104, 136, .58);
@@ -338,15 +339,15 @@
 
     .sticky {
       position: absolute;
-      right: 31%;
-      bottom: 18px;
-      width: 142px;
-      padding: 13px;
+      right: 27%;
+      bottom: 20px;
+      width: 166px;
+      padding: 16px;
       transform: rotate(-2deg);
       background: var(--butter);
       box-shadow: 3px 5px 10px rgba(68, 48, 35, .12);
       font-family: var(--type);
-      font-size: .66rem;
+      font-size: .75rem;
       line-height: 1.65;
       text-align: center;
     }
@@ -499,26 +500,81 @@
     }
 
     .home-footer {
+      position: relative;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 28px;
+      grid-template-columns: 1fr 1.15fr auto;
+      gap: 44px;
       align-items: center;
-      padding: 28px 20px 34px;
-      border-top: 1px solid var(--line);
+      margin: 0 12px 14px;
+      padding: 34px 40px 38px 54px;
+      border: 1px solid var(--line);
+      background:
+        repeating-linear-gradient(to bottom, transparent 0 27px, rgba(102, 152, 204, .12) 28px),
+        rgba(251, 246, 238, .78);
+      box-shadow: 5px 6px 0 rgba(37, 38, 58, .06);
+    }
+
+    .home-footer::before {
+      position: absolute;
+      top: -11px;
+      left: 46%;
+      width: 112px;
+      height: 22px;
+      transform: rotate(-1deg);
+      background: rgba(233, 197, 142, .72);
+      content: "";
+    }
+
+    .home-footer::after {
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      left: 24px;
+      width: 10px;
+      background:
+        radial-gradient(circle, var(--paper) 0 3px, rgba(37,38,58,.17) 3.5px 4.5px, transparent 5px)
+        center top / 10px 28px repeat-y;
+      content: "";
     }
 
     .footer-note {
       margin: 0;
       font-family: var(--type);
-      font-size: .82rem;
+      font-size: .86rem;
+      line-height: 1.65;
+    }
+
+    .footer-note strong,
+    .footer-note small {
+      display: block;
+    }
+
+    .footer-note strong {
+      font-size: 1rem;
+    }
+
+    .footer-note small {
+      color: var(--ink-soft);
+      font-family: var(--body);
+      font-size: .72rem;
+    }
+
+    .footer-note .handwritten {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--blush);
+      font-family: var(--hand);
+      font-size: 1.15rem;
+      font-weight: 600;
     }
 
     .footer-quote {
-      max-width: 360px;
+      max-width: 380px;
       margin: 0;
       font-family: var(--type);
-      font-size: 1rem;
-      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      text-align: left;
     }
 
     .footer-quote span {
@@ -544,22 +600,37 @@
     }
 
     .about {
-      max-width: 700px;
-      padding: 60px 20px 70px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 64px;
+      max-width: none;
+      margin: 34px 12px 0;
+      padding: 46px 42px 40px;
+      border-top: 1px solid var(--line);
+      text-align: left;
     }
 
     .about h2 {
-      margin: 0 0 18px;
+      max-width: 520px;
+      margin: 8px 0 0;
       font-family: var(--type);
       font-size: clamp(1.65rem, 3vw, 2.3rem);
       font-weight: 400;
     }
 
     .about p {
-      margin: 0;
+      max-width: 570px;
+      margin: 0 0 12px;
       color: var(--ink-soft);
       font-size: .9rem;
+      line-height: 1.75;
+    }
+
+    .about-label {
+      color: var(--blush);
+      font-family: var(--hand);
+      font-size: 1.2rem;
+      font-weight: 600;
     }
 
     .project-name {
@@ -606,8 +677,13 @@
       }
 
       .archive-row,
+      .about,
       .home-footer {
         grid-template-columns: 1fr;
+      }
+
+      .about {
+        gap: 18px;
       }
 
       .socials {
@@ -748,10 +824,10 @@
         <div class="desk" aria-label="Colagem com imagens do primeiro volume da biblioteca">
           <span class="desk-title">hoje:</span>
           <div class="polaroid polaroid-main">
-            <img src="window-swap.jpg" alt="Window Swap">
+            <img src="window-swap-view.png" alt="Vista para o mar dentro do Window Swap">
           </div>
           <div class="polaroid polaroid-small">
-            <img src="radio-garden.jpg" alt="Radio Garden">
+            <img src="radio-garden-real.png" alt="Radio Garden aberto no globo">
           </div>
           <span class="tape tape-one" aria-hidden="true"></span>
           <span class="tape tape-two" aria-hidden="true"></span>
@@ -807,7 +883,7 @@
         <article class="paper-card" style="--accent: var(--butter);">
           <span class="paper-label">da gaveta</span>
           <div class="volume-preview">
-            <img src="the-deep-sea.jpg" alt="The Deep Sea">
+            <img src="deep-sea-cover.png" alt="Tela de abertura do The Deep Sea">
             <div>
               <h2>Bonitezas #001</h2>
               <p>Lugares da internet que me fizeram parar o que eu estava fazendo hoje.</p>
@@ -818,16 +894,23 @@
       </section>
 
       <section class="about" id="sobre">
-        <h2>Uma biblioteca feita por alguém que vive abrindo abas.</h2>
-        <p>
-          O <strong class="project-name">antes que eu esqueça</strong> nasceu da vontade de voltar a escolher o que merece atenção.
-          Não é uma promessa de atualização perfeita. É um arquivo vivo, construído aos poucos.
-        </p>
+        <div>
+          <span class="about-label">sobre este arquivo</span>
+          <h2>Uma biblioteca feita por alguém que vive abrindo abas.</h2>
+        </div>
+        <div>
+          <p>O <strong class="project-name">antes que eu esqueça</strong> nasceu da vontade de voltar a escolher o que merece atenção.</p>
+          <p>Não é uma promessa de atualização perfeita. É um arquivo vivo: uma coisa de cada vez, guardada porque fez sentido ficar.</p>
+        </div>
       </section>
     </main>
 
     <footer class="home-footer">
-      <p class="footer-note">newsletter <small>(quando fizer sentido)</small><br>conteúdo com alma, direto na sua caixa.</p>
+      <p class="footer-note">
+        <span class="handwritten">da gaveta para você</span>
+        <strong>newsletter, quando fizer sentido.</strong>
+        <small>conteúdo com alma, direto na sua caixa.</small>
+      </p>
       <p class="footer-quote">“memórias não cabem na cabeça.<br>por isso <span>escrevo.</span>”</p>
       <div class="socials" aria-label="Atalhos da biblioteca">
         <span style="--accent: var(--blush);">IG</span>

@@ -1097,15 +1097,16 @@
 
     .save-note {
       position: absolute;
-      top: 43px;
-      right: 4px;
-      width: 152px;
+      top: 48px;
+      right: -2px;
+      width: 205px;
       color: var(--blush);
       font-family: "Caveat", cursive;
-      font-size: .88rem;
-      line-height: 1;
+      font-size: 1.12rem;
+      font-weight: 600;
+      line-height: .95;
       text-align: right;
-      transform: rotate(-2deg);
+      transform: rotate(-1.5deg);
       pointer-events: none;
     }
 
@@ -1123,8 +1124,9 @@
     }
 
     .hero-subtitle {
-      max-width: 620px;
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      max-width: 760px;
+      font-size: clamp(.92rem, 1.7vw, 1.16rem);
+      line-height: 1.42;
     }
 
     .manifesto {
@@ -1161,7 +1163,7 @@
 
     .identity-icon {
       display: inline-grid;
-      width: 28px;
+      width: 32px;
       aspect-ratio: 1;
       margin-right: 8px;
       place-items: center;
@@ -1196,9 +1198,10 @@
 
     .site-shot img {
       width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
       object-position: top;
+      background: var(--ink);
     }
 
     .site-shot figcaption {
@@ -1232,13 +1235,33 @@
 
     .final-grid .small-note,
     .final-grid .library-card {
+      position: relative;
       width: auto;
       height: 100%;
       margin: 0;
       padding: 28px;
     }
 
-    .final-grid .small-note,
+    .final-grid .small-note {
+      display: block;
+      transform: rotate(-.35deg);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.2), transparent 42%),
+        var(--butter);
+    }
+
+    .final-grid .small-note::before {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      width: 112px;
+      height: 30px;
+      transform: translateX(-50%) rotate(1.5deg);
+      background: rgba(232, 179, 112, .62);
+      box-shadow: 0 1px 2px rgba(37, 38, 58, .08);
+      content: "";
+    }
+
     .final-grid .library-card {
       display: block;
     }
@@ -1247,6 +1270,24 @@
     .final-grid .library-card h2 {
       margin-bottom: 20px;
       font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+    }
+
+    .final-grid .identity-icon {
+      width: 42px;
+      margin-right: 11px;
+      font-size: 1rem;
+    }
+
+    .final-grid .small-note .prose p {
+      margin-bottom: .88em;
+    }
+
+    .final-grid .small-note .note-emphasis {
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, .28);
+      font-family: "Special Elite", monospace;
+      font-size: .92em;
+      line-height: 1.5;
     }
 
     .final-grid .library-details div {
@@ -1303,7 +1344,7 @@
           <button class="header-button" id="printButton" type="button" aria-label="Salvar esta edição em PDF">
             ↓ <span class="label">salvar</span>
           </button>
-          <span class="save-note">se quiser, pode baixar em PDF ;)</span>
+          <span class="save-note">se quiser, pode<br>baixar em PDF ;)</span>
         </div>
         <button class="header-button share-trigger" type="button" aria-label="Compartilhar esta edição">
           ↗ <span class="label">compartilhar</span>
@@ -1318,7 +1359,7 @@
         <h1 id="page-title">Boni<em>tezas</em></h1>
         <span class="issue-number">#001</span>
       </div>
-      <p class="hero-subtitle">Lugares da internet que me fizeram parar o que eu estava fazendo hoje.</p>
+      <p class="hero-subtitle">Lugares da internet que me fizeram parar<br>o que eu estava fazendo hoje.</p>
     </section>
 
     <section class="shell manifesto" aria-label="Abertura">
@@ -1356,7 +1397,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="window-swap.jpg" alt="Tela inicial do Window Swap com o convite para abrir uma janela em algum lugar do mundo" width="1362" height="940">
+        <img src="window-swap-real.png" alt="Tela inicial do Window Swap com o convite para abrir uma janela em algum lugar do mundo" width="1240" height="1224">
         <figcaption>
           <span>captura da experiência</span>
           <span>window swap · 26 jul 2026</span>
@@ -1391,7 +1432,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="radio-garden.jpg" alt="Radio Garden aberto em uma rádio de São Paulo, com o globo interativo ao fundo" width="1362" height="940">
+        <img src="radio-garden-real.png" alt="Radio Garden aberto em uma rádio de Boromo, com o globo interativo ao fundo" width="1598" height="1360">
         <figcaption>
           <span>captura da experiência</span>
           <span>radio garden · 26 jul 2026</span>
@@ -1427,7 +1468,7 @@
       </a>
 
       <figure class="site-shot">
-        <img src="the-deep-sea.jpg" alt="Abertura do projeto The Deep Sea, com o título sobre a superfície do oceano" width="887" height="516">
+        <img src="deep-sea-real.png" alt="The Deep Sea mostrando animais encontrados a 32 metros de profundidade" width="1436" height="1360">
         <figcaption>
           <span>captura arquivada da experiência</span>
           <span>the deep sea · neal agarwal</span>
@@ -1459,9 +1500,9 @@
           Pequena anotação
         </h2>
         <div class="prose">
-          <p>Percebi uma coisa curiosa hoje: achei que estava testando sites. Na verdade, estava descobrindo como gosto de explorar a internet.</p>
-          <p><strong>Menos contemplação. Mais exploração. Mais cliques. Mais “o que acontece se eu abrir isso?”.</strong></p>
-          <p>Talvez essa biblioteca seja exatamente isso: uma coleção de pequenas curiosidades que fizeram meu dia ficar um pouco mais interessante.</p>
+          <p>Hoje eu percebi que não estava só testando sites. Estava prestando atenção no meu próprio jeito de navegar.</p>
+          <p class="note-emphasis"><strong>Menos contemplação. Mais exploração. Mais cliques. Mais “o que acontece se eu abrir isso?”.</strong></p>
+          <p>Talvez essa biblioteca nasça daí: não de guardar links bonitos, mas de guardar os lugares que mudaram um pouquinho o rumo do meu dia.</p>
         </div>
       </section>
 
