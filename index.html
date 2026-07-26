@@ -305,20 +305,33 @@
       background: #e3af24;
     }
 
+    .polaroid.vertical img {
+      object-fit: contain;
+      background: #201f2e;
+    }
+
     .polaroid-main {
-      top: 54px;
-      right: 28px;
-      width: 48%;
-      height: 220px;
+      top: 38px;
+      right: 24px;
+      width: 29%;
+      height: 282px;
       transform: rotate(3deg);
     }
 
     .polaroid-small {
-      bottom: 25px;
-      left: 42px;
-      width: 39%;
-      height: 166px;
+      bottom: 24px;
+      left: 34px;
+      width: 42%;
+      height: 138px;
       transform: rotate(-4deg);
+    }
+
+    .polaroid-third {
+      top: 45px;
+      left: 128px;
+      width: 42%;
+      height: 128px;
+      transform: rotate(1.5deg);
     }
 
     .tape {
@@ -330,24 +343,24 @@
     }
 
     .tape-one {
-      top: 46px;
-      right: 24%;
+      top: 30px;
+      right: 16%;
       transform: rotate(-4deg);
     }
 
     .tape-two {
-      bottom: 176px;
-      left: 15%;
+      bottom: 146px;
+      left: 16%;
       transform: rotate(5deg);
       background: rgba(227, 104, 136, .58);
     }
 
     .sticky {
       position: absolute;
-      right: 27%;
-      bottom: 20px;
-      width: 166px;
-      padding: 16px;
+      left: 47%;
+      bottom: 22px;
+      width: 145px;
+      padding: 13px;
       transform: rotate(-2deg);
       background: var(--butter);
       box-shadow: 3px 5px 10px rgba(68, 48, 35, .12);
@@ -502,6 +515,45 @@
       margin: 0;
       color: var(--ink-soft);
       font-size: .78rem;
+    }
+
+    .volume-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .mini-volume {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .mini-volume img {
+      width: 100%;
+      height: 132px;
+      padding: 5px 5px 16px;
+      object-fit: contain;
+      transform: rotate(var(--turn, -2deg));
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 4px 5px 12px rgba(68, 48, 35, .12);
+    }
+
+    .mini-volume h2 {
+      margin: 0 0 8px;
+      font-family: var(--type);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.18;
+    }
+
+    .mini-volume p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: .65rem;
+      line-height: 1.45;
     }
 
     .home-footer {
@@ -739,20 +791,28 @@
       }
 
       .polaroid-main {
-        top: 78px;
-        right: 22px;
-        width: 50%;
-        height: 170px;
+        top: 58px;
+        right: 12px;
+        width: 38%;
+        height: 230px;
       }
 
       .polaroid-small {
-        bottom: 26px;
-        left: 24px;
-        width: 40%;
-        height: 135px;
+        bottom: 20px;
+        left: 16px;
+        width: 48%;
+        height: 120px;
+      }
+
+      .polaroid-third {
+        top: 54px;
+        left: 110px;
+        width: 45%;
+        height: 105px;
       }
 
       .sticky {
+        left: auto;
         right: 18px;
         bottom: 16px;
         width: 140px;
@@ -784,6 +844,10 @@
       }
 
       .volume-preview {
+        grid-template-columns: 1fr;
+      }
+
+      .volume-pair {
         grid-template-columns: 1fr;
       }
     }
@@ -827,13 +891,16 @@
           <a class="text-link" href="#arquivo">explorar o arquivo <span aria-hidden="true">→</span></a>
         </div>
 
-        <div class="desk" aria-label="Colagem com imagens da edição Reencontros">
+        <div class="desk" aria-label="Colagem com imagens das edições Reencontros e Bonitezas">
           <span class="desk-title">hoje:</span>
-          <div class="polaroid polaroid-main">
+          <div class="polaroid polaroid-main vertical">
             <img src="dead-poets-scene.jpg" alt="Cena de Sociedade dos Poetas Mortos">
           </div>
-          <div class="polaroid polaroid-small poster">
-            <img src="dead-poets-cover.jpg" alt="Capa de Sociedade dos Poetas Mortos">
+          <div class="polaroid polaroid-small">
+            <img src="window-swap-view.png" alt="Uma janela aberta pelo Window Swap, da edição Bonitezas">
+          </div>
+          <div class="polaroid polaroid-third">
+            <img src="profetas-sinteticos.png" alt="Projeto Profetas Sintéticos, da edição Reencontros">
           </div>
           <span class="tape tape-one" aria-hidden="true"></span>
           <span class="tape tape-two" aria-hidden="true"></span>
@@ -880,20 +947,30 @@
           <ul class="latest-list">
             <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html">Reencontros #001: coisas que vale revisitar</a></li>
             <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html#playlist-title">Playlist: quando a gente assistia Sessão da Tarde</a></li>
-            <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html#film-title">Para rever: Sociedade dos Poetas Mortos</a></li>
-            <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html#ted-title">Anotação: uma ideia não precisa nascer certa</a></li>
+            <li><time datetime="2026-07-26">26.07</time><a href="bonitezas-001.html">Bonitezas #001: lugares que me fizeram parar</a></li>
+            <li><time datetime="2026-07-26">26.07</time><a href="bonitezas-001.html#radio-title">Favorito: Radio Garden</a></li>
           </ul>
           <a class="text-link" href="reencontros-001.html">abrir edição completa →</a>
         </article>
 
         <article class="paper-card" style="--accent: var(--butter);">
           <span class="paper-label">da gaveta</span>
-          <div class="volume-preview">
-            <img src="dead-poets-cover.jpg" alt="Capa de Sociedade dos Poetas Mortos">
-            <div>
-              <h2>Reencontros #001</h2>
-              <p>Música, cinema, conselhos antigos e ideias que talvez valha a pena encontrar outra vez.</p>
-              <a class="text-link" href="reencontros-001.html">abrir guardado →</a>
+          <div class="volume-pair">
+            <div class="mini-volume" style="--turn:-2deg;">
+              <img src="dead-poets-scene.jpg" alt="Cena vertical de Sociedade dos Poetas Mortos">
+              <div>
+                <h2>Reencontros #001</h2>
+                <p>Coisas que talvez valha a pena encontrar outra vez.</p>
+                <a class="text-link" href="reencontros-001.html">abrir →</a>
+              </div>
+            </div>
+            <div class="mini-volume" style="--turn:2deg;">
+              <img src="deep-sea-cover.png" alt="Capa de The Deep Sea">
+              <div>
+                <h2>Bonitezas #001</h2>
+                <p>Lugares da internet que despertaram curiosidade.</p>
+                <a class="text-link" href="bonitezas-001.html">abrir →</a>
+              </div>
             </div>
           </div>
         </article>
