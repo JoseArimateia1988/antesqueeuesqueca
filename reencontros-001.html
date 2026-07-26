@@ -1,0 +1,1614 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4ebdd">
+  <meta name="description" content="Reencontros #001 — coisas que talvez valha a pena reencontrar.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Reencontros #001 — antes que eu esqueça">
+  <meta property="og:description" content="Uma trilha sonora antiga, um filme que ficou na memória, um conselho de mãe, uma ferramenta subestimada e uma palestra sobre o medo de errar.">
+  <title>Reencontros #001 — antes que eu esqueça</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f4ebdd;
+      --paper-light: #fffaf1;
+      --ink: #25263a;
+      --ink-soft: #615d69;
+      --blush: #e36888;
+      --tangerine: #f08c21;
+      --butter: #f2d88f;
+      --sea: #6698cc;
+      --matcha: #b4b534;
+      --wine: #a70d49;
+      --line: rgba(37, 38, 58, .18);
+      --shadow: 7px 8px 0 rgba(37, 38, 58, .08);
+      --shell: min(1120px, calc(100% - 40px));
+      --type: "Special Elite", "Courier New", monospace;
+      --hand: "Caveat", cursive;
+      --body: "DM Sans", sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        linear-gradient(rgba(37, 38, 58, .027) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 38, 58, .022) 1px, transparent 1px),
+        var(--paper);
+      background-size: 5px 5px;
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.68;
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      opacity: .045;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+      content: "";
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      color: inherit;
+      font: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--sea);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      width: var(--shell);
+      margin-inline: auto;
+    }
+
+    .project-name {
+      font-weight: 800;
+      text-transform: lowercase;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 10px;
+      left: 10px;
+      padding: 9px 12px;
+      transform: translateY(-160%);
+      background: var(--ink);
+      color: white;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .progress {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background: var(--wine);
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 235, 221, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--type);
+      font-size: .92rem;
+    }
+
+    .brand-mark,
+    .identity-icon {
+      display: inline-grid;
+      width: 34px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      background: var(--butter);
+      font-family: var(--mono);
+      font-size: .8rem;
+      line-height: 1;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .header-button,
+    .action-button {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .header-button:hover,
+    .action-button:hover {
+      background: var(--paper-light);
+    }
+
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    .section-name {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-family: var(--type);
+      font-size: clamp(2.5rem, 7vw, 5.4rem);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: .98;
+    }
+
+    h1 em {
+      color: var(--matcha);
+      font-style: normal;
+    }
+
+    .issue-number {
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      max-width: 780px;
+      margin: 20px 0 10px;
+      font-family: var(--type);
+      font-size: clamp(1.35rem, 3vw, 2.25rem);
+      line-height: 1.25;
+    }
+
+    .hero-copy {
+      max-width: 930px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: clamp(.92rem, 1.7vw, 1.08rem);
+    }
+
+    .chapter {
+      position: relative;
+      margin-bottom: 30px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, .72);
+      box-shadow: var(--shadow);
+    }
+
+    .chapter::before {
+      position: absolute;
+      top: -11px;
+      left: 48%;
+      width: 110px;
+      height: 24px;
+      transform: rotate(-1deg);
+      background: rgba(233, 197, 142, .72);
+      content: "";
+    }
+
+    .chapter-heading {
+      display: flex;
+      margin-bottom: 26px;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 15px;
+    }
+
+    .chapter-heading .identity-icon {
+      flex: 0 0 auto;
+      width: 42px;
+      background: var(--accent, var(--butter));
+      font-size: 1rem;
+    }
+
+    .chapter-kicker {
+      display: block;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .chapter-heading h2 {
+      margin: 1px 0 0;
+      font-family: var(--type);
+      font-size: clamp(1.55rem, 3.3vw, 2.45rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .intro-grid,
+    .media-grid,
+    .closing-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .prose {
+      color: var(--ink-soft);
+    }
+
+    .prose p {
+      margin-bottom: .9em;
+    }
+
+    .prose strong {
+      color: var(--ink);
+    }
+
+    .marker {
+      padding: 0 .08em;
+      background: linear-gradient(transparent 56%, var(--mark-color, var(--butter)) 56% 91%, transparent 91%);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .hand-note {
+      padding: 18px 20px;
+      transform: rotate(-.7deg);
+      background: var(--butter);
+      box-shadow: 4px 5px 0 rgba(37, 38, 58, .14);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.22;
+    }
+
+    .cassette {
+      position: relative;
+      padding: 24px;
+      overflow: hidden;
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      background: var(--ink);
+      color: var(--paper-light);
+      box-shadow: 7px 7px 0 var(--matcha);
+    }
+
+    .cassette::before,
+    .cassette::after {
+      position: absolute;
+      top: 18px;
+      width: 58px;
+      aspect-ratio: 1;
+      border: 10px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .cassette::before {
+      left: 20px;
+    }
+
+    .cassette::after {
+      right: 20px;
+    }
+
+    .cassette-label {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+      padding: 14px 88px;
+      border-radius: 7px;
+      background: var(--paper-light);
+      color: var(--ink);
+      font-family: var(--type);
+      text-align: center;
+    }
+
+    .cassette small {
+      display: block;
+      margin-top: 18px;
+      color: rgba(255,255,255,.65);
+      font-family: var(--mono);
+      font-size: .62rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .playlist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: track;
+    }
+
+    .playlist li {
+      position: relative;
+      min-height: 88px;
+      padding: 14px 14px 12px 48px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.4);
+      counter-increment: track;
+    }
+
+    .playlist li::before {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: .75rem;
+      content: counter(track, decimal-leading-zero);
+    }
+
+    .playlist strong,
+    .playlist span,
+    .playlist a {
+      display: block;
+    }
+
+    .playlist strong {
+      font-family: var(--type);
+      font-size: .9rem;
+      line-height: 1.3;
+    }
+
+    .playlist span {
+      color: var(--ink-soft);
+      font-size: .72rem;
+    }
+
+    .playlist a {
+      margin-top: 5px;
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: .62rem;
+      text-transform: uppercase;
+    }
+
+    .spotify-card {
+      display: grid;
+      grid-template-columns: 1.45fr .55fr;
+      gap: 0;
+      border: 1px solid var(--ink);
+      background: var(--matcha);
+      box-shadow: 5px 6px 0 var(--ink);
+    }
+
+    .spotify-main,
+    .archive-card {
+      padding: 18px;
+    }
+
+    .spotify-main h3,
+    .archive-card h3 {
+      margin-bottom: 10px;
+      font-family: var(--type);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .spotify-main p {
+      margin-bottom: 12px;
+      font-size: .82rem;
+    }
+
+    .spotify-embed {
+      min-height: 152px;
+    }
+
+    .spotify-embed iframe {
+      display: block;
+      width: 100%;
+      height: 152px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .archive-card {
+      border-left: 1px solid var(--ink);
+      background: var(--paper-light);
+    }
+
+    .archive-card dl {
+      margin: 0;
+    }
+
+    .archive-card dt {
+      margin-top: 10px;
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: .61rem;
+      text-transform: uppercase;
+    }
+
+    .archive-card dd {
+      margin: 2px 0 0;
+      font-size: .77rem;
+    }
+
+    .footnote {
+      margin: 18px 0 0;
+      color: var(--ink-soft);
+      font-size: .7rem;
+    }
+
+    .cinema-screen {
+      position: relative;
+      min-height: 330px;
+      display: grid;
+      padding: 38px;
+      place-items: center;
+      overflow: hidden;
+      border: 10px solid #171823;
+      background:
+        radial-gradient(circle at 50% 25%, rgba(227,104,136,.28), transparent 34%),
+        linear-gradient(145deg, #282a43, #0e0f18);
+      color: white;
+      text-align: center;
+      box-shadow: 7px 8px 0 rgba(37, 38, 58, .14);
+    }
+
+    .cinema-screen::after {
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background: repeating-linear-gradient(0deg, transparent 0 3px, white 4px);
+      content: "";
+    }
+
+    .cinema-screen > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cinema-screen span {
+      display: block;
+      color: var(--butter);
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .cinema-screen h3 {
+      max-width: 580px;
+      margin: 14px auto 8px;
+      font-family: var(--type);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .cinema-screen p {
+      margin-bottom: 22px;
+      color: rgba(255,255,255,.7);
+      font-size: .82rem;
+    }
+
+    .link-button {
+      display: inline-flex;
+      padding: 9px 13px;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid currentColor;
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: .68rem;
+      text-transform: uppercase;
+    }
+
+    .cinema-screen .link-button {
+      color: white;
+    }
+
+    .film-note {
+      margin-top: 18px;
+      padding: 15px 18px;
+      transform: rotate(1deg);
+      background: var(--blush);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .film-media-strip {
+      display: grid;
+      grid-template-columns: minmax(180px, .62fr) minmax(240px, .78fr) minmax(280px, 1.6fr);
+      gap: 22px;
+      margin-bottom: 30px;
+      align-items: stretch;
+    }
+
+    .film-cover {
+      position: relative;
+      margin: 0;
+      padding: 8px 8px 28px;
+      transform: rotate(-1.2deg);
+      border: 1px solid var(--ink);
+      background: white;
+      box-shadow: 5px 6px 0 rgba(37,38,58,.14);
+    }
+
+    .film-cover::before {
+      position: absolute;
+      z-index: 2;
+      top: -10px;
+      left: calc(50% - 42px);
+      width: 84px;
+      height: 22px;
+      transform: rotate(2deg);
+      background: rgba(233,197,142,.78);
+      content: "";
+    }
+
+    .film-cover img {
+      width: 100%;
+      height: 100%;
+      max-height: 490px;
+      object-fit: cover;
+    }
+
+    .film-cover figcaption {
+      padding: 7px 4px 0;
+      font-family: var(--hand);
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .tiktok-player {
+      min-height: 430px;
+      overflow: hidden;
+      border: 8px solid var(--ink);
+      background: var(--ink);
+      box-shadow: 5px 6px 0 var(--blush);
+    }
+
+    .tiktok-player iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      border: 0;
+    }
+
+    .scene-card {
+      position: relative;
+      display: grid;
+      min-height: 430px;
+      padding: 18px;
+      align-content: end;
+      overflow: hidden;
+      background: var(--ink);
+      color: white;
+    }
+
+    .scene-card img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      inset: 0;
+      opacity: .58;
+    }
+
+    .scene-card::after {
+      position: absolute;
+      background: linear-gradient(transparent 20%, rgba(20,21,32,.92) 90%);
+      content: "";
+      inset: 0;
+    }
+
+    .scene-card blockquote {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-family: var(--type);
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+      line-height: 1.42;
+    }
+
+    .film-copy-columns {
+      columns: 2;
+      column-gap: 44px;
+      column-rule: 1px solid var(--line);
+    }
+
+    .film-copy-columns p,
+    .film-copy-columns .link-button {
+      break-inside: avoid;
+    }
+
+    .highlight-quote {
+      margin: 24px 0 0;
+      padding: 20px 24px;
+      border-left: 5px solid var(--accent, var(--matcha));
+      background: rgba(255,255,255,.42);
+      color: var(--ink);
+      font-family: var(--type);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.5;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 26px 0;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding: 52px 18px 20px;
+      border: 1px solid var(--ink);
+      background: var(--paper-light);
+      counter-increment: step;
+    }
+
+    .step::before {
+      position: absolute;
+      top: 14px;
+      left: 17px;
+      color: var(--wine);
+      font-family: var(--type);
+      font-size: 1.3rem;
+      content: "0" counter(step);
+    }
+
+    .step h3 {
+      margin-bottom: 9px;
+      font-family: var(--type);
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .step p,
+    .step li {
+      color: var(--ink-soft);
+      font-size: .75rem;
+    }
+
+    .step ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .synthetic {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 28px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: var(--ink);
+      color: var(--paper-light);
+    }
+
+    .synthetic h3 {
+      margin-bottom: 8px;
+      color: var(--butter);
+      font-family: var(--type);
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+
+    .synthetic p {
+      margin-bottom: .8em;
+      color: rgba(255,255,255,.72);
+      font-size: .78rem;
+    }
+
+    .synthetic .link-button {
+      color: var(--butter);
+    }
+
+    .synthetic-image {
+      width: 100%;
+      margin: 14px 0 16px;
+      border: 1px solid rgba(255,255,255,.25);
+    }
+
+    .pins {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .pin {
+      position: relative;
+      min-height: 180px;
+      padding: 28px 20px 20px;
+      transform: rotate(var(--turn, 0deg));
+      border: 1px solid var(--line);
+      background: var(--pin-color, var(--paper-light));
+      box-shadow: 4px 5px 0 rgba(37,38,58,.1);
+    }
+
+    .pin::before {
+      position: absolute;
+      top: -8px;
+      left: calc(50% - 7px);
+      width: 14px;
+      aspect-ratio: 1;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      background: var(--blush);
+      content: "";
+    }
+
+    .pin-label {
+      color: var(--wine);
+      font-family: var(--mono);
+      font-size: .59rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .pin h3 {
+      margin: 9px 0 8px;
+      font-family: var(--type);
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .pin p,
+    .pin li {
+      color: var(--ink-soft);
+      font-size: .73rem;
+    }
+
+    .pin ul {
+      margin: 8px 0 0;
+      padding-left: 17px;
+    }
+
+    .challenge {
+      margin: 28px auto 4px;
+      padding: 18px 22px;
+      transform: rotate(-.5deg);
+      background: var(--tangerine);
+      box-shadow: 4px 5px 0 var(--ink);
+      font-family: var(--type);
+      text-align: center;
+    }
+
+    .ted-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .ted-player {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      border: 10px solid var(--ink);
+      background: #000;
+    }
+
+    .ted-player iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      inset: 0;
+    }
+
+    .ted-link-card {
+      position: relative;
+      min-height: 360px;
+      display: grid;
+      padding: 34px;
+      align-content: end;
+      overflow: hidden;
+      border: 10px solid var(--ink);
+      background:
+        radial-gradient(circle at 72% 22%, rgba(255,255,255,.16), transparent 23%),
+        linear-gradient(145deg, #e62b1e, #a70d49);
+      color: white;
+      box-shadow: 7px 8px 0 rgba(37,38,58,.14);
+    }
+
+    .ted-link-card::before {
+      position: absolute;
+      top: 30px;
+      right: 34px;
+      width: 72px;
+      aspect-ratio: 1;
+      border: 2px solid white;
+      border-radius: 50%;
+      content: "▶";
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+    }
+
+    .ted-link-card span {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .ted-link-card strong {
+      display: block;
+      max-width: 520px;
+      margin-top: 9px;
+      font-family: var(--type);
+      font-size: clamp(1.6rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .ted-link-card small {
+      display: block;
+      margin-top: 14px;
+      color: rgba(255,255,255,.74);
+    }
+
+    .meeting-phrases {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .meeting-phrases span {
+      padding: 10px 12px;
+      border-left: 3px solid var(--blush);
+      background: rgba(255,255,255,.4);
+      font-family: var(--type);
+      font-size: .78rem;
+    }
+
+    .question {
+      margin: 24px 0 0;
+      color: var(--wine);
+      font-family: var(--hand);
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .closing-note,
+    .library-card {
+      position: relative;
+      padding: 30px;
+      border: 1px solid var(--ink);
+    }
+
+    .closing-note {
+      transform: rotate(-.25deg);
+      background:
+        repeating-linear-gradient(to bottom, transparent 0 29px, rgba(102,152,204,.18) 30px),
+        var(--paper-light);
+      box-shadow: 6px 7px 0 rgba(37,38,58,.12);
+    }
+
+    .closing-note::before {
+      position: absolute;
+      top: -12px;
+      left: 40%;
+      width: 110px;
+      height: 24px;
+      transform: rotate(2deg);
+      background: rgba(227,104,136,.55);
+      content: "";
+    }
+
+    .closing-note h2,
+    .library-card h2 {
+      margin-bottom: 16px;
+      font-family: var(--type);
+      font-size: 1.65rem;
+      font-weight: 400;
+    }
+
+    .closing-note p {
+      margin-bottom: .75em;
+      font-size: .86rem;
+    }
+
+    .closing-note .question {
+      margin-top: 18px;
+    }
+
+    .library-card {
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--paper-light);
+    }
+
+    .library-card::after {
+      position: absolute;
+      right: -80px;
+      bottom: -110px;
+      width: 260px;
+      aspect-ratio: 1;
+      border: 2px solid var(--blush);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .library-card dl {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .library-card div {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .library-card dt {
+      color: rgba(255,255,255,.55);
+      font-family: var(--mono);
+      font-size: .62rem;
+      text-transform: uppercase;
+    }
+
+    .library-card dd {
+      margin: 0;
+      font-size: .78rem;
+    }
+
+    .seals {
+      display: flex;
+      margin-top: 18px;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .seal {
+      padding: 5px 8px;
+      border: 1px solid rgba(255,255,255,.35);
+      font-family: var(--mono);
+      font-size: .58rem;
+    }
+
+    .site-footer {
+      padding: 36px 0 44px;
+      text-align: center;
+    }
+
+    .site-footer strong {
+      font-family: var(--type);
+    }
+
+    .site-footer p {
+      margin: 5px 0 0;
+      color: var(--ink-soft);
+      font-size: .7rem;
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 200;
+      right: 18px;
+      bottom: 18px;
+      max-width: min(330px, calc(100% - 36px));
+      padding: 11px 14px;
+      transform: translateY(140%);
+      border: 1px solid var(--ink);
+      background: var(--butter);
+      box-shadow: 4px 5px 0 var(--ink);
+      transition: transform .2s ease;
+    }
+
+    .toast.is-visible {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 820px) {
+      .intro-grid,
+      .media-grid,
+      .spotify-card,
+      .synthetic,
+      .ted-grid,
+      .closing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .archive-card {
+        border-top: 1px solid var(--ink);
+        border-left: 0;
+      }
+
+      .film-media-strip {
+        grid-template-columns: .8fr 1.2fr;
+      }
+
+      .scene-card {
+        grid-column: 1 / -1;
+        min-height: 300px;
+      }
+
+      .steps,
+      .pins {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ted-player {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --shell: min(100% - 20px, 1120px);
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      .header-inner {
+        min-height: 54px;
+      }
+
+      .brand {
+        font-size: .74rem;
+      }
+
+      .brand-mark {
+        width: 28px;
+      }
+
+      .header-button .label {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .section-name {
+        display: block;
+      }
+
+      .issue-number {
+        display: block;
+        margin-top: 8px;
+      }
+
+      .chapter {
+        padding: 25px 18px;
+      }
+
+      .chapter-heading {
+        align-items: flex-start;
+      }
+
+      .playlist,
+      .steps,
+      .pins {
+        grid-template-columns: 1fr;
+      }
+
+      .film-media-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .film-cover {
+        width: min(100%, 320px);
+        justify-self: center;
+      }
+
+      .tiktok-player {
+        width: min(100%, 330px);
+        justify-self: center;
+      }
+
+      .film-copy-columns {
+        columns: 1;
+      }
+
+      .cassette-label {
+        padding-inline: 58px;
+      }
+
+      .spotify-main,
+      .archive-card,
+      .synthetic,
+      .closing-note,
+      .library-card {
+        padding: 22px;
+      }
+
+      .cinema-screen {
+        min-height: 280px;
+        padding: 24px;
+      }
+
+      .ted-player {
+        min-height: 0;
+      }
+
+      .library-card div {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .progress,
+      .toast,
+      .header-actions {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+        font-size: 11pt;
+      }
+
+      .chapter {
+        box-shadow: none;
+        break-inside: avoid-page;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="antes que eu esqueça — início">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <strong class="project-name">antes que eu esqueça</strong>
+      </a>
+      <div class="header-actions">
+        <button class="header-button" id="printButton" type="button" aria-label="Salvar esta edição em PDF">
+          ↓ <span class="label">salvar</span>
+        </button>
+        <button class="header-button share-trigger" type="button" aria-label="Compartilhar esta edição">
+          ↗ <span class="label">compartilhar</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="shell hero" aria-labelledby="page-title">
+      <div class="section-name">
+        <h1 id="page-title">Reen<em>contros</em></h1>
+        <span class="issue-number">#001</span>
+      </div>
+      <p class="hero-title">Coisas que talvez valha a pena reencontrar</p>
+      <p class="hero-copy">Uma trilha sonora antiga, um filme que ficou na memória, um conselho de mãe que ganhou novas camadas, uma ferramenta subestimada e uma palestra sobre o medo de errar.</p>
+    </section>
+
+    <section class="shell chapter" style="--accent: var(--matcha);" aria-labelledby="playlist-title">
+      <header class="chapter-heading">
+        <span class="identity-icon" style="--accent: var(--matcha);" aria-hidden="true">▶</span>
+        <div>
+          <span class="chapter-kicker">01 · aperta o play antes de continuar</span>
+          <h2 id="playlist-title">Algumas músicas não precisam nem chegar ao refrão.</h2>
+        </div>
+      </header>
+
+      <div class="spotify-card">
+        <div class="spotify-main">
+          <h3><span class="marker">Quando a gente assistia Sessão da Tarde</span></h3>
+          <p><strong>Dê o play.</strong> Os primeiros segundos fazem o resto.</p>
+          <div class="spotify-embed">
+            <iframe
+              src="https://open.spotify.com/embed/playlist/6AabTdIs7xqmGJ6O8KlR04?utm_source=generator&amp;theme=0&amp;si=5cd2f3d2b11a4a93"
+              title="Playlist Quando a gente assistia Sessão da Tarde no Spotify"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <aside class="archive-card" aria-label="Ficha da playlist">
+          <h3>Ficha da fita</h3>
+          <dl>
+            <dt>Arquivado em</dt>
+            <dd>Anos 90 e 2000</dd>
+            <dt>Desperta lembranças de</dt>
+            <dd>Sessão da Tarde, férias escolares, filme repetido na televisão, DVD alugado e o sofá da sala.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="shell chapter" style="--accent: var(--blush);" aria-labelledby="film-title">
+      <header class="chapter-heading">
+        <span class="identity-icon" aria-hidden="true">▻</span>
+        <div>
+          <span class="chapter-kicker">02 · para a lista de coisas que quero rever</span>
+          <h2 id="film-title">Sociedade dos Poetas Mortos</h2>
+        </div>
+      </header>
+
+      <div class="film-media-strip">
+        <figure class="film-cover">
+          <img src="dead-poets-cover.jpg" alt="Capa de Sociedade dos Poetas Mortos, com Robin Williams e os alunos">
+          <figcaption>na lista de coisas para rever</figcaption>
+        </figure>
+
+        <div class="tiktok-player">
+          <iframe
+            src="https://www.tiktok.com/player/v1/7660691045151264018?autoplay=0&amp;loop=0&amp;rel=0"
+            title="Trecho marcante de Sociedade dos Poetas Mortos no TikTok"
+            allow="fullscreen"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+
+        <figure class="scene-card">
+          <img src="dead-poets-scene.jpg" alt="Cena de Sociedade dos Poetas Mortos sobre olhar para as coisas de forma diferente">
+          <blockquote>“Quando pensam que sabem uma coisa, têm que olhar para ela de forma diferente.”</blockquote>
+        </figure>
+      </div>
+
+      <div class="prose film-copy-columns">
+        <p>Eu tenho certa dificuldade em <span class="marker">rever coisas que amei.</span></p>
+        <p>Talvez seja medo de descobrir que aquilo já não conversa comigo da mesma forma. Talvez seja só a resistência de voltar para uma história quando existem tantas novas esperando.</p>
+        <p>Mas <strong>Sociedade dos Poetas Mortos entrou na minha lista de coisas para rever.</strong></p>
+        <p>O filme acompanha John Keating, um professor de literatura que chega a um colégio tradicional e começa a provocar seus alunos a pensar por conta própria, questionar regras e enxergar a vida para além do caminho já desenhado para eles.</p>
+        <p>Eu lembro especialmente da atuação de <strong>Robin Williams</strong>. Mas lembro também da vontade de ter professores que mostrassem aquilo que ele mostrava: que aprender não precisava ser apenas decorar respostas, cumprir expectativas ou repetir o que já estava certo.</p>
+        <p><strong>Podia ser uma forma de olhar para o mundo com mais curiosidade.</strong></p>
+        <p>Não consegui rever o filme hoje. Então ele não entra aqui como uma recomendação definitiva.</p>
+        <p><span class="marker"><strong>Entra como promessa:</strong> quero descobrir o que esse filme vai me dizer agora.</span></p>
+        <a class="link-button" href="https://globoplay.globo.com/v/3561512/" target="_blank" rel="noopener noreferrer">assistir ao trailer ↗</a>
+        <a class="link-button" href="https://www.disneyplus.com/en-br/browse/entity-d5ed4abd-f24f-44a2-8084-345f088947f9" target="_blank" rel="noopener noreferrer">ver no Disney+ ↗</a>
+      </div>
+    </section>
+
+    <section class="shell chapter" style="--accent: var(--butter);" aria-labelledby="advice-title">
+      <header class="chapter-heading">
+        <span class="identity-icon" aria-hidden="true">“ ”</span>
+        <div>
+          <span class="chapter-kicker">03 · um conselho antigo para um problema novo</span>
+          <h2 id="advice-title">“Não acredite em tudo que você lê.”</h2>
+        </div>
+      </header>
+
+      <div class="intro-grid">
+        <div class="prose">
+          <p>Durante muito tempo, essa era uma frase que vinha das nossas mães.</p>
+          <p><strong>Não acredite em tudo que está no jornal. Não confie em qualquer coisa que alguém escreveu. Veja de onde veio. Pergunte antes.</strong></p>
+          <p>Depois chegou a internet e, por algum tempo, pareceu que a solução seria simples: “pesquisa no Google”.</p>
+        </div>
+        <div class="prose">
+          <p>Hoje não temos dificuldade para encontrar informação. Temos dificuldade para escolher, entre uma quantidade quase infinita de informação, o que merece confiança.</p>
+          <p>Textos, imagens, vozes e vídeos convincentes podem ser produzidos em poucos minutos. A aparência deixou de ser uma pista suficiente.</p>
+          <p><strong>O conselho não envelheceu. O problema é que ficou muito maior.</strong></p>
+        </div>
+      </div>
+
+      <h3 class="hero-title">3 coisas para fazer antes de compartilhar</h3>
+      <div class="steps">
+        <article class="step">
+          <h3>Saia da publicação</h3>
+          <p>Não tente decidir se algo é verdade lendo apenas os comentários ou o perfil que publicou.</p>
+          <p>Pesquise fora dali e procure a mesma informação em outros veículos, instituições, documentos ou especialistas reconhecidos.</p>
+        </article>
+        <article class="step">
+          <h3>Desconfie da pressa</h3>
+          <p>Frases que tentam provocar reação antes da verificação merecem atenção:</p>
+          <ul>
+            <li>“Compartilhe antes que apaguem.”</li>
+            <li>“A mídia não quer que você saiba.”</li>
+            <li>“Envie imediatamente.”</li>
+          </ul>
+        </article>
+        <article class="step">
+          <h3>Verifique imagem, vídeo e voz</h3>
+          <p>Uma foto pode ser antiga, um vídeo pode ter sido cortado e uma voz pode ter sido clonada.</p>
+          <p>Use Google Lens, procure trechos da fala e descubra quem produziu o conteúdo.</p>
+        </article>
+      </div>
+
+      <aside class="synthetic">
+        <div>
+          <span class="chapter-kicker">projeto para conhecer</span>
+          <h3>Profetas Sintéticos</h3>
+          <img class="synthetic-image" src="profetas-sinteticos.png" alt="Página inicial do projeto Profetas Sintéticos">
+          <a class="link-button" href="https://profetassinteticos.com/" target="_blank" rel="noopener noreferrer">conhecer o projeto ↗</a>
+        </div>
+        <div>
+          <p>Conheci este projeto durante um curso sobre inteligência artificial no CR_IA, apresentado pelo próprio professor envolvido em sua criação.</p>
+          <p>A plataforma verifica perfis públicos do Instagram e do TikTok que usam personagens, imagens, vozes ou discursos gerados por inteligência artificial sem deixar isso transparente.</p>
+          <p>Ela cruza diferentes sinais técnicos, mas não entrega toda a decisão à máquina: as análises passam também por revisão humana. O projeto trabalha com probabilidades e margens de erro, não com certezas automáticas.</p>
+        </div>
+      </aside>
+
+      <blockquote class="highlight-quote">Talvez o novo “não acredite em tudo que você lê” seja: <strong>não acredite automaticamente em tudo que você vê ou escuta.</strong></blockquote>
+    </section>
+
+    <section class="shell chapter" style="--accent: var(--tangerine);" aria-labelledby="pinterest-title">
+      <header class="chapter-heading">
+        <span class="identity-icon" aria-hidden="true">⌖</span>
+        <div>
+          <span class="chapter-kicker">04 · uma ferramenta que a gente subestima</span>
+          <h2 id="pinterest-title">Pinterest não serve apenas para procurar decoração</h2>
+        </div>
+      </header>
+
+      <div class="intro-grid">
+        <div class="prose">
+          <p>Quando alguém fala em Pinterest, a primeira lembrança costuma ser decoração.</p>
+          <p>Uma sala bonita. Uma cozinha planejada. Uma parede com uma cor que ninguém sabe o nome.</p>
+        </div>
+        <div class="prose">
+          <p>Mas o Pinterest funciona menos como uma rede social tradicional e mais como um mecanismo de busca visual.</p>
+          <p><strong>Você não precisa entrar para saber o que os outros estão fazendo. Pode entrar para organizar o que você quer fazer.</strong></p>
+        </div>
+      </div>
+
+      <div class="pins">
+        <article class="pin" style="--pin-color:#f8e4ea;--turn:-.7deg;">
+          <span class="pin-label">uso pessoal · 01</span>
+          <h3>Planejar sem transformar tudo em planilha</h3>
+          <p>Crie uma pasta para viagem, reforma, festa, guarda-roupa ou projeto da casa e separe por seções. O painel começa a funcionar como mapa.</p>
+        </article>
+        <article class="pin" style="--pin-color:#f7e6bd;--turn:.45deg;">
+          <span class="pin-label">uso pessoal · 02</span>
+          <h3>Pesquisar visualmente antes de comprar</h3>
+          <p>Procure o item em ambientes e combinações reais: “sofá verde sala pequena”, “tênis branco looks trabalho”.</p>
+        </article>
+        <article class="pin" style="--pin-color:#dce9f5;--turn:-.3deg;">
+          <span class="pin-label">uso pessoal · 03</span>
+          <h3>Criar repertório para decisões futuras</h3>
+          <p>Nem toda referência precisa virar ação agora. O Pinterest pode ser uma gaveta externa para coisas que você não quer esquecer.</p>
+        </article>
+        <article class="pin" style="--pin-color:#e8e9c7;--turn:.55deg;">
+          <span class="pin-label">uso profissional · 01</span>
+          <h3>Pesquisar pelo sentimento</h3>
+          <p>Troque “identidade visual de marca” por buscas como “editorial nostálgico e colorido”. Quanto mais sensorial, menos genérico.</p>
+        </article>
+        <article class="pin" style="--pin-color:#f9dfc9;--turn:-.45deg;">
+          <span class="pin-label">uso profissional · 02</span>
+          <h3>Criar referências e rejeições</h3>
+          <p>Um painel de “não queremos isso” ajuda clientes e equipes a entenderem limites visuais e pode economizar uma reunião inteira.</p>
+        </article>
+        <article class="pin" style="--pin-color:#eadff1;--turn:.25deg;">
+          <span class="pin-label">uso profissional · 03</span>
+          <h3>Usar como ponto de partida</h3>
+          <p>Escolha uma referência para cada camada:</p>
+          <ul>
+            <li>cor e fotografia</li>
+            <li>tipografia e composição</li>
+            <li>textura</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="challenge">Pequeno desafio: pesquise hoje no Pinterest algo que você normalmente procuraria primeiro no Google.</p>
+    </section>
+
+    <section class="shell chapter" style="--accent: var(--sea);" aria-labelledby="ted-title">
+      <header class="chapter-heading">
+        <span class="identity-icon" aria-hidden="true">↗</span>
+        <div>
+          <span class="chapter-kicker">05 · uma palestra para guardar</span>
+          <h2 id="ted-title">As escolas matam a criatividade?</h2>
+        </div>
+      </header>
+
+      <div class="ted-grid">
+        <div>
+          <div style="max-width:1024px">
+            <div class="ted-player">
+              <iframe
+                src="https://embed.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity"
+                width="1024"
+                height="576"
+                title="Do schools kill creativity?"
+                frameborder="0"
+                scrolling="no"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                webkitallowfullscreen
+                mozallowfullscreen
+                onload="window.parent.postMessage('iframeLoaded', 'https://embed.ted.com')"></iframe>
+            </div>
+          </div>
+          <p class="footnote">Sir Ken Robinson · TED2006 · cerca de 19 minutos</p>
+        </div>
+
+        <div class="prose">
+          <p>Na palestra, Ken Robinson argumenta que os sistemas de educação tendem a tratar o erro como fracasso, embora errar faça parte da criação de qualquer coisa original.</p>
+          <p>Enquanto assistia, fiquei pensando em algumas frases que aparecem o tempo todo nas reuniões:</p>
+          <div class="meeting-phrases">
+            <span>“Estou só jogando aqui…”</span>
+            <span>“Pode ser uma ideia nada a ver, mas…”</span>
+            <span>“Não pensei direito, tá?”</span>
+          </div>
+          <p>Antes mesmo de apresentar uma ideia, <span class="marker"><strong>a gente tenta diminuir o tamanho dela.</strong></span> É quase um pedido antecipado para não sermos julgados caso ela esteja errada.</p>
+          <p>Mas uma ideia inicial não deveria precisar estar certa. Ela deveria poder ser apenas uma tentativa, uma hipótese, alguma coisa colocada na mesa para que outras pessoas mexam, completem, desdobrem ou descartem.</p>
+          <blockquote class="highlight-quote">Uma ideia não precisa nascer certa. <strong>Ela precisa ter espaço para ser explorada.</strong></blockquote>
+          <p class="question">Quantas ideias a gente diminui antes de descobrir até onde elas poderiam chegar?</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell closing-grid">
+      <section class="closing-note" aria-labelledby="closing-title">
+        <h2 id="closing-title">Vale revisitar</h2>
+        <p>A playlist de hoje me deu uma baita nostalgia.</p>
+        <p>Teve música que, nos primeiros segundos, já puxou de volta uma cena, um filme, um sofá e aquela sensação de que a tarde demorava muito mais para acabar.</p>
+        <p>E, no meio disso tudo, <strong>Sociedade dos Poetas Mortos</strong> voltou para a minha lista.</p>
+        <p>Eu ainda não revi, mas vou rever. Quero descobrir o que continua igual, o que mudou e o que esse filme vai me dizer agora, tantos anos depois.</p>
+        <p class="question">E você? Qual filme marcou uma fase da sua vida e está esperando para ser revisto?</p>
+      </section>
+
+      <section class="library-card" aria-labelledby="library-title">
+        <h2 id="library-title">Ficha da biblioteca</h2>
+        <dl>
+          <div>
+            <dt>Gaveta</dt>
+            <dd>Reencontros</dd>
+          </div>
+          <div>
+            <dt>Guardado</dt>
+            <dd>#001</dd>
+          </div>
+          <div>
+            <dt>Temas</dt>
+            <dd>Nostalgia, criatividade, cinema, música, internet, inteligência artificial e repertório.</dd>
+          </div>
+        </dl>
+        <div class="seals" aria-label="Selos">
+          <span class="seal">vale revisitar</span>
+          <span class="seal">me fez pensar</span>
+          <span class="seal">quero voltar</span>
+          <span class="seal">aperta o play</span>
+          <span class="seal">experimentar depois</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <strong class="project-name">antes que eu esqueça.</strong>
+      <p>Uma biblioteca pessoal aberta, construída aos poucos e sem frequência neurótica.</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const progress = document.querySelector(".progress");
+      const toast = document.querySelector(".toast");
+      let toastTimer;
+
+      const showToast = (message) => {
+        clearTimeout(toastTimer);
+        toast.textContent = message;
+        toast.classList.add("is-visible");
+        toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+      };
+
+      const shareEdition = async () => {
+        const shareData = {
+          title: "Reencontros #001 — antes que eu esqueça",
+          text: "Coisas que talvez valha a pena reencontrar.",
+          url: window.location.href
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast("Link copiado. Agora é só passar adiante.");
+          }
+        } catch (error) {
+          if (error && error.name !== "AbortError") {
+            showToast("Não consegui compartilhar por aqui.");
+          }
+        }
+      };
+
+      document.querySelectorAll(".share-trigger").forEach((button) => {
+        button.addEventListener("click", shareEdition);
+      });
+
+      document.querySelector("#printButton").addEventListener("click", () => window.print());
+
+      const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+      };
+
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
