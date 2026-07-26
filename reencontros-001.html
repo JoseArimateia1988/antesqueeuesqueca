@@ -580,7 +580,7 @@
 
     .film-media-strip {
       display: grid;
-      grid-template-columns: minmax(180px, .62fr) minmax(240px, .78fr) minmax(280px, 1.6fr);
+      grid-template-columns: minmax(250px, .72fr) minmax(360px, 1.28fr);
       gap: 22px;
       margin-bottom: 30px;
       align-items: stretch;
@@ -675,14 +675,27 @@
     }
 
     .film-copy-columns {
-      columns: 2;
-      column-gap: 44px;
-      column-rule: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      font-size: .88rem;
     }
 
-    .film-copy-columns p,
-    .film-copy-columns .link-button {
-      break-inside: avoid;
+    .film-copy-block {
+      padding: 2px 24px 2px 0;
+    }
+
+    .film-copy-block + .film-copy-block {
+      padding-right: 0;
+      padding-left: 34px;
+      border-left: 1px solid var(--line);
+    }
+
+    .film-links {
+      display: flex;
+      margin-top: 18px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .highlight-quote {
@@ -843,6 +856,23 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
+      align-items: start;
+    }
+
+    .ted-copy {
+      font-size: .82rem;
+      line-height: 1.62;
+    }
+
+    .ted-copy .highlight-quote {
+      margin-top: 16px;
+      padding: 16px 18px;
+      font-size: 1rem;
+    }
+
+    .ted-copy .question {
+      margin-top: 16px;
+      font-size: 1.25rem;
     }
 
     .ted-player {
@@ -944,6 +974,11 @@
       border: 1px solid var(--ink);
     }
 
+    .closing-grid {
+      margin-bottom: 30px;
+      align-items: stretch;
+    }
+
     .closing-note {
       transform: rotate(-.25deg);
       background:
@@ -1003,7 +1038,7 @@
       margin: 0;
     }
 
-    .library-card div {
+    .library-card dl > div {
       display: grid;
       grid-template-columns: 90px 1fr;
       gap: 12px;
@@ -1171,7 +1206,14 @@
       }
 
       .film-copy-columns {
-        columns: 1;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .film-copy-block,
+      .film-copy-block + .film-copy-block {
+        padding: 0;
+        border-left: 0;
       }
 
       .cassette-label {
@@ -1195,7 +1237,7 @@
         min-height: 0;
       }
 
-      .library-card div {
+      .library-card dl > div {
         grid-template-columns: 1fr;
         gap: 3px;
       }
@@ -1268,8 +1310,8 @@
       <header class="chapter-heading">
         <span class="identity-icon" style="--accent: var(--matcha);" aria-hidden="true">▶</span>
         <div>
-          <span class="chapter-kicker">01 · aperta o play antes de continuar</span>
-          <h2 id="playlist-title">Algumas músicas não precisam nem chegar ao refrão.</h2>
+          <span class="chapter-kicker">01 · algumas músicas não precisam nem chegar ao refrão</span>
+          <h2 id="playlist-title">Aperta o play antes de continuar</h2>
         </div>
       </header>
 
@@ -1308,11 +1350,6 @@
       </header>
 
       <div class="film-media-strip">
-        <figure class="film-cover">
-          <img src="dead-poets-cover.jpg" alt="Capa de Sociedade dos Poetas Mortos, com Robin Williams e os alunos">
-          <figcaption>na lista de coisas para rever</figcaption>
-        </figure>
-
         <div class="tiktok-player">
           <iframe
             src="https://www.tiktok.com/player/v1/7660691045151264018?autoplay=0&amp;loop=0&amp;rel=0"
@@ -1329,16 +1366,20 @@
       </div>
 
       <div class="prose film-copy-columns">
-        <p>Eu tenho certa dificuldade em <span class="marker">rever coisas que amei.</span></p>
-        <p>Talvez seja medo de descobrir que aquilo já não conversa comigo da mesma forma. Talvez seja só a resistência de voltar para uma história quando existem tantas novas esperando.</p>
-        <p>Mas <strong>Sociedade dos Poetas Mortos entrou na minha lista de coisas para rever.</strong></p>
-        <p>O filme acompanha John Keating, um professor de literatura que chega a um colégio tradicional e começa a provocar seus alunos a pensar por conta própria, questionar regras e enxergar a vida para além do caminho já desenhado para eles.</p>
-        <p>Eu lembro especialmente da atuação de <strong>Robin Williams</strong>. Mas lembro também da vontade de ter professores que mostrassem aquilo que ele mostrava: que aprender não precisava ser apenas decorar respostas, cumprir expectativas ou repetir o que já estava certo.</p>
-        <p><strong>Podia ser uma forma de olhar para o mundo com mais curiosidade.</strong></p>
-        <p>Não consegui rever o filme hoje. Então ele não entra aqui como uma recomendação definitiva.</p>
-        <p><span class="marker"><strong>Entra como promessa:</strong> quero descobrir o que esse filme vai me dizer agora.</span></p>
-        <a class="link-button" href="https://globoplay.globo.com/v/3561512/" target="_blank" rel="noopener noreferrer">assistir ao trailer ↗</a>
-        <a class="link-button" href="https://www.disneyplus.com/en-br/browse/entity-d5ed4abd-f24f-44a2-8084-345f088947f9" target="_blank" rel="noopener noreferrer">ver no Disney+ ↗</a>
+        <div class="film-copy-block">
+          <p>Eu tenho certa dificuldade em <span class="marker">rever coisas que amei.</span> Talvez seja medo de descobrir que aquilo já não conversa comigo da mesma forma. Talvez seja só a resistência de voltar para uma história quando existem tantas novas esperando.</p>
+          <p>Mas <strong>Sociedade dos Poetas Mortos entrou na minha lista de coisas para rever.</strong></p>
+          <p>O filme acompanha John Keating, um professor de literatura que chega a um colégio tradicional e provoca seus alunos a pensar por conta própria, questionar regras e enxergar a vida para além do caminho já desenhado para eles.</p>
+        </div>
+        <div class="film-copy-block">
+          <p>Eu lembro especialmente da atuação de <strong>Robin Williams</strong>. Mas lembro também da vontade de ter professores que mostrassem que aprender não precisava ser apenas decorar respostas, cumprir expectativas ou repetir o que já estava certo.</p>
+          <p><strong>Podia ser uma forma de olhar para o mundo com mais curiosidade.</strong></p>
+          <p>Não consegui rever o filme hoje. Então ele não entra como recomendação definitiva. <span class="marker"><strong>Entra como promessa:</strong> quero descobrir o que vai me dizer agora.</span></p>
+          <div class="film-links">
+            <a class="link-button" href="https://globoplay.globo.com/v/3561512/" target="_blank" rel="noopener noreferrer">assistir ao trailer ↗</a>
+            <a class="link-button" href="https://www.disneyplus.com/en-br/browse/entity-d5ed4abd-f24f-44a2-8084-345f088947f9" target="_blank" rel="noopener noreferrer">ver no Disney+ ↗</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1495,16 +1536,16 @@
           <p class="footnote">Sir Ken Robinson · TED2006 · cerca de 19 minutos</p>
         </div>
 
-        <div class="prose">
-          <p>Na palestra, Ken Robinson argumenta que os sistemas de educação tendem a tratar o erro como fracasso, embora errar faça parte da criação de qualquer coisa original.</p>
-          <p>Enquanto assistia, fiquei pensando em algumas frases que aparecem o tempo todo nas reuniões:</p>
+        <div class="prose ted-copy">
+          <p>Ken Robinson fala sobre como a escola costuma tratar o erro como fracasso — mesmo que <strong>errar faça parte de criar qualquer coisa original.</strong></p>
+          <p>Enquanto assistia, pensei nas frases que aparecem o tempo todo nas reuniões:</p>
           <div class="meeting-phrases">
             <span>“Estou só jogando aqui…”</span>
             <span>“Pode ser uma ideia nada a ver, mas…”</span>
             <span>“Não pensei direito, tá?”</span>
           </div>
-          <p>Antes mesmo de apresentar uma ideia, <span class="marker"><strong>a gente tenta diminuir o tamanho dela.</strong></span> É quase um pedido antecipado para não sermos julgados caso ela esteja errada.</p>
-          <p>Mas uma ideia inicial não deveria precisar estar certa. Ela deveria poder ser apenas uma tentativa, uma hipótese, alguma coisa colocada na mesa para que outras pessoas mexam, completem, desdobrem ou descartem.</p>
+          <p>Antes mesmo de apresentar uma ideia, <span class="marker"><strong>a gente tenta diminuir o tamanho dela.</strong></span> Quase um pedido antecipado para não sermos julgados.</p>
+          <p>Mas uma ideia inicial não precisa estar certa. Pode ser só uma tentativa colocada na mesa para outras pessoas mexerem, completarem ou descartarem.</p>
           <blockquote class="highlight-quote">Uma ideia não precisa nascer certa. <strong>Ela precisa ter espaço para ser explorada.</strong></blockquote>
           <p class="question">Quantas ideias a gente diminui antes de descobrir até onde elas poderiam chegar?</p>
         </div>
@@ -1530,6 +1571,10 @@
           </div>
           <div>
             <dt>Guardado</dt>
+            <dd>26 de julho de 2026</dd>
+          </div>
+          <div>
+            <dt>Edição</dt>
             <dd>#001</dd>
           </div>
           <div>
