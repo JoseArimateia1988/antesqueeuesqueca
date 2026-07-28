@@ -523,6 +523,10 @@
       gap: 18px;
     }
 
+    .volume-pair .mini-volume:last-child {
+      grid-column: 1 / -1;
+    }
+
     .mini-volume {
       display: grid;
       grid-template-columns: 100px 1fr;
@@ -953,17 +957,27 @@
         <article class="paper-card" style="--accent: var(--blush);">
           <span class="paper-label">últimas anotações</span>
           <ul class="latest-list">
+            <li><time datetime="2026-07-27">27.07</time><a href="explorar-001.html">Explorar #001: 4 sites que eu não conhecia</a></li>
+            <li><time datetime="2026-07-27">27.07</time><a href="explorar-001.html#pingo-title">Favorito: Pingo Utilitários</a></li>
             <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html">Reencontros #001: coisas que vale revisitar</a></li>
             <li><time datetime="2026-07-26">26.07</time><a href="reencontros-001.html#playlist-title">Playlist: quando a gente assistia Sessão da Tarde</a></li>
             <li><time datetime="2026-07-26">26.07</time><a href="bonitezas-001.html">Bonitezas #001: lugares que me fizeram parar</a></li>
             <li><time datetime="2026-07-26">26.07</time><a href="bonitezas-001.html#radio-title">Favorito: Radio Garden</a></li>
           </ul>
-          <a class="text-link" href="reencontros-001.html">abrir edição completa →</a>
+          <a class="text-link" href="explorar-001.html">abrir edição completa →</a>
         </article>
 
         <article class="paper-card" style="--accent: var(--butter);">
           <span class="paper-label">da gaveta</span>
           <div class="volume-pair">
+            <div class="mini-volume" style="--turn:-2deg;">
+              <img src="web-design-museum-home.jpg" alt="Capturas de sites antigos no Web Design Museum: Google 1998, YouTube 2005 e Netflix 2002">
+              <div>
+                <h2>Explorar #001</h2>
+                <p>4 sites que eu não conhecia e já estão nos favoritos.</p>
+                <a class="text-link" href="explorar-001.html">abrir →</a>
+              </div>
+            </div>
             <div class="mini-volume" style="--turn:-2deg;">
               <img src="dead-poets-scene.jpg" alt="Cena vertical de Sociedade dos Poetas Mortos">
               <div>
