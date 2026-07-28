@@ -1427,6 +1427,10 @@
       margin: 26px 0;
     }
 
+    .step-grid--3col {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .step-card {
       padding: 20px;
       border: 1px solid var(--line);
@@ -1785,7 +1789,7 @@
         <span class="badge">Reaprendendo na prática</span>
       </header>
 
-      <div class="discovery-content">
+      <div class="discovery-content" style="grid-column: 1 / -1;">
         <blockquote class="pull-quote">“Mac é um mundo à parte e eu estou reaprendendo a usar tudo.”</blockquote>
 
         <div class="prose">
@@ -1797,7 +1801,7 @@
         </div>
       </div>
 
-      <div class="shell step-grid" style="padding:0;">
+      <div class="shell step-grid step-grid--3col">
         <div class="step-card">
           <h3>Criar um PDF com vários arquivos</h3>
           <p>Primeiro: o <code>Control</code> não faz nada sozinho.</p>
@@ -1843,7 +1847,7 @@
         </div>
       </div>
 
-      <div class="discovery-content">
+      <div class="discovery-content" style="grid-column: 1 / -1;">
         <div class="prose">
           <p class="shelf-reason">Conclusão parcial desta investigação: <strong>Ações Rápidas é um reizinho que eu quase não usava.</strong> Eu estava procurando aplicativo, site e gambiarra para coisas que já moravam no clique direito do computador.</p>
 
@@ -1951,7 +1955,7 @@
         </div>
       </div>
 
-      <div class="shell step-grid" style="padding:0; grid-template-columns: 1fr 1fr;">
+      <div class="shell step-grid">
         <div class="step-card">
           <h3>O furo no corpo da caneta</h3>
           <p>Ele ajuda a equilibrar a pressão de dentro e de fora da caneta.</p>
