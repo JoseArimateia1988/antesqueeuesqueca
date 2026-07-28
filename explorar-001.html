@@ -554,17 +554,24 @@
 
     .library-details dd {
       margin: 0;
+      font-size: .82rem;
       font-weight: 600;
     }
 
-    .shelf-list {
-      margin: 8px 0 0;
-      padding: 0;
-      list-style: none;
+    .seals {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
     }
 
-    .shelf-list li + li {
-      margin-top: 6px;
+    .seal {
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, .35);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: .6rem;
     }
 
     .closing {
@@ -888,7 +895,7 @@
     }
 
     .prose {
-      font-size: .94rem;
+      font-size: .88rem;
       line-height: 1.58;
     }
 
@@ -897,7 +904,7 @@
     }
 
     .prose .short {
-      font-size: 1.03rem;
+      font-size: .97rem;
       line-height: 1.4;
     }
 
@@ -934,7 +941,7 @@
     .site-url {
       width: fit-content;
       margin: -12px 0 0;
-      font-size: .64rem;
+      font-size: .6rem;
     }
 
     .site-shot {
@@ -974,12 +981,12 @@
     .shelf-reason {
       margin-top: 22px;
       padding: 13px 15px;
-      font-size: .68rem;
+      font-size: .64rem;
     }
 
     .tag {
       padding: 4px 7px;
-      font-size: .6rem;
+      font-size: .57rem;
     }
 
     .small-note {
@@ -1118,7 +1125,7 @@
 
     .hero-subtitle {
       max-width: 760px;
-      font-size: clamp(.92rem, 1.7vw, 1.16rem);
+      font-size: clamp(.86rem, 1.6vw, 1.08rem);
       line-height: 1.42;
     }
 
@@ -1129,7 +1136,7 @@
     }
 
     .manifesto-copy {
-      font-size: clamp(1rem, 1.8vw, 1.24rem);
+      font-size: clamp(.94rem, 1.7vw, 1.16rem);
       line-height: 1.42;
     }
 
@@ -1184,7 +1191,7 @@
     }
 
     .discovery h2 {
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
     }
 
     .site-shot {
@@ -1219,7 +1226,7 @@
 
     .pull-quote {
       margin-bottom: 12px;
-      font-size: clamp(1rem, 1.8vw, 1.22rem);
+      font-size: clamp(.94rem, 1.7vw, 1.14rem);
     }
 
     .shelf-reason {
@@ -1334,7 +1341,7 @@
       background: var(--accent);
       color: var(--ink);
       font-family: "IBM Plex Mono", monospace;
-      font-size: .62rem;
+      font-size: .59rem;
       font-weight: 700;
       letter-spacing: .05em;
       text-transform: uppercase;
@@ -1350,7 +1357,7 @@
       padding-left: 14px;
       border-left: 2px solid var(--ink-soft);
       color: var(--ink-soft);
-      font-size: .82rem;
+      font-size: .78rem;
       font-style: italic;
     }
 
@@ -1451,9 +1458,9 @@
 
         <div class="prose">
           <p>O Pingo Utilitários reúne um tanto de recursos gratuitos em um único lugar: calculadoras, conversores, ferramentas para textos, imagens, PDFs, consultas e várias outras coisinhas que normalmente fariam a gente abrir dez sites diferentes.</p>
-          <p>E o melhor: é gratuito e não precisa de cadastro.</p>
+          <p>E o melhor: <strong>é gratuito e não precisa de cadastro.</strong></p>
           <p>Eu fiquei sinceramente assim: como eu nunca tinha encontrado isso antes?</p>
-          <p>Amo quando um único site consegue resolver mil coisas, principalmente aquelas tarefas pequenas e chatas que aparecem no meio do trabalho e interrompem tudo.</p>
+          <p>Amo quando um único site <strong>consegue resolver mil coisas</strong>, principalmente aquelas tarefas pequenas e chatas que aparecem no meio do trabalho e interrompem tudo.</p>
 
           <p class="shelf-reason">Já foi direto para os meus favoritos.</p>
           <div class="tags" aria-label="Etiquetas">
@@ -1492,7 +1499,7 @@
 
         <div class="prose">
           <p>Eu sempre fico meio perdida no tanto de coisa que a cidade tem para oferecer. Tem exposição, cinema, oficina, apresentação, atividade para criança, show e evento gratuito, mas as informações ficam espalhadas em tantos lugares que dá uma preguiça só de começar a procurar.</p>
-          <p>O SP Mais Cultura reúne a programação cultural da cidade e permite pesquisar por data, tipo de atividade e localização.</p>
+          <p>O SP Mais Cultura reúne a programação cultural da cidade e <strong>permite pesquisar por data, tipo de atividade e localização.</strong></p>
           <p>E já fiquei pensando como seria útil ter algo assim, de forma organizada, para outras cidades e regiões também.</p>
 
           <p class="shelf-reason">É o tipo de ferramenta que pode ajudar a transformar o clássico “a gente precisa fazer alguma coisa no fim de semana” em um plano de verdade.</p>
@@ -1531,8 +1538,8 @@
         <blockquote class="pull-quote">“Esse aqui é um verdadeiro buraco de minhoca da internet.”</blockquote>
 
         <div class="prose">
-          <p>O Internet Artifacts apresenta momentos importantes da história da web em uma linha do tempo interativa. Não é só um texto contando o que aconteceu. Você consegue navegar, clicar, abrir coisas e entender um pouco de como a internet foi se formando.</p>
-          <p>Eu ainda não consegui ver tudo, porque é realmente muita coisa, mas já me diverti descobrindo, por exemplo, quando foi disparado o primeiro spam.</p>
+          <p>O Internet Artifacts apresenta momentos importantes da história da web em uma linha do tempo interativa. Não é só um texto contando o que aconteceu. Você consegue navegar, clicar, abrir coisas e <strong>entender um pouco de como a internet foi se formando.</strong></p>
+          <p>Eu ainda não consegui ver tudo, porque é realmente muita coisa, mas já me diverti descobrindo, por exemplo, quando foi disparado o <strong>primeiro spam.</strong></p>
 
           <p class="shelf-reason">É muito doido perceber que várias coisas que hoje fazem parte do nosso cotidiano digital começaram de formas completamente diferentes.</p>
           <div class="tags" aria-label="Etiquetas">
@@ -1574,7 +1581,7 @@
         <div class="prose">
           <p>Esse aqui eu já olhei pensando em trabalho.</p>
           <p>O Web Design Museum reúne imagens de sites antigos, aplicativos, programas e jogos, principalmente das décadas de 1990 e 2000.</p>
-          <p>Dá para perceber como os sites eram construídos, quais cores e fontes apareciam, como os menus funcionavam e o que era considerado moderno em cada época.</p>
+          <p>Dá para perceber como os sites eram construídos, <strong>quais cores e fontes apareciam,</strong> como os menus funcionavam e o que era considerado moderno em cada época.</p>
 
           <p class="shelf-reason">Além da nostalgia, achei perfeito para procurar referências antigas na hora de produzir conteúdo. Sabe quando você quer mostrar visualmente como alguma coisa era “quando tudo isso era mato”, mas não encontra uma imagem boa? Esse site pode salvar.</p>
           <div class="tags" aria-label="Etiquetas">
@@ -1597,7 +1604,7 @@
         </h2>
         <div class="prose">
           <p>Esses sites também me fizeram pensar em como nossa relação com a internet mudou.</p>
-          <p>Hoje a gente salva um vídeo, manda um post para si mesma, tira um print e pensa que vai voltar depois. Na maioria das vezes, nunca mais encontra aquilo.</p>
+          <p>Hoje a gente salva um vídeo, manda um post para si mesma, tira um print e pensa que vai voltar depois. Na maioria das vezes, <strong>nunca mais encontra aquilo.</strong></p>
           <p class="note-emphasis"><strong>Favoritar um site parece quase um gesto de outra internet. Uma forma de dizer: quero lembrar que esse lugar existe e quero conseguir voltar até ele.</strong></p>
           <p>Talvez seja justamente isso que eu queira guardar por aqui: cantinhos da internet que merecem mais tempo do que o algoritmo costuma dar.</p>
         </div>
@@ -1611,33 +1618,30 @@
 
         <dl class="library-details">
           <div>
-            <dt>Guardado em</dt>
-            <dd>27 de julho de 2026</dd>
-          </div>
-          <div>
             <dt>Gaveta</dt>
             <dd>Explorar</dd>
           </div>
           <div>
-            <dt>Tempo explorando</dt>
-            <dd>Aproximadamente 15 minutos</dd>
+            <dt>Guardado</dt>
+            <dd>27 de julho de 2026</dd>
           </div>
           <div>
-            <dt>Favorito do dia</dt>
-            <dd>Pingo Utilitários</dd>
+            <dt>Edição</dt>
+            <dd>#001</dd>
           </div>
           <div>
-            <dt>Entraram para a estante</dt>
-            <dd>
-              <ul class="shelf-list">
-                <li>Pingo Utilitários</li>
-                <li>SP Mais Cultura</li>
-                <li>Internet Artifacts</li>
-                <li>Web Design Museum</li>
-              </ul>
-            </dd>
+            <dt>Temas</dt>
+            <dd>Ferramentas, cultura, internet e repertório visual.</dd>
           </div>
         </dl>
+
+        <div class="seals" aria-label="Selos">
+          <span class="seal">resolve a vida</span>
+          <span class="seal">sair de casa</span>
+          <span class="seal">buraco de minhoca</span>
+          <span class="seal">repertório</span>
+          <span class="seal">favoritado</span>
+        </div>
       </section>
     </div>
 
