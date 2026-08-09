@@ -1,0 +1,4 @@
+# Copie este arquivo para .dev.vars apenas no seu computador.
+# Nunca envie os valores reais para o GitHub.
+APP_ENCRYPTION_KEY="base64-com-32-bytes"
+APP_SETUP_TOKEN="token-longo-para-o-primeiro-acesso"

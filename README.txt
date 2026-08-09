@@ -14,6 +14,12 @@ Para editar textos e publicações:
 - duplique um objeto dentro da lista POSTS
 - altere título, slug, data, tags, corpo e links
 
+Painel editorial com IA:
+- o código completo fica em painel-editorial/
+- veja painel-editorial/README.md para rodar, editar e publicar
+- o painel usa backend Cloudflare Workers + D1 para proteger login e chaves
+- o GitHub é a fonte oficial; o painel não depende do ChatGPT Sites
+
 Paleta:
 Blush #E36888
 Tangerine #F08C21
