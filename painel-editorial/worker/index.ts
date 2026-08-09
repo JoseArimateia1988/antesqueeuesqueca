@@ -1,13 +1,6 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import handler from "vinext/server/app-router-entry";
 
-interface Env {
-  ASSETS: Fetcher;
-  DB: D1Database;
-  APP_ENCRYPTION_KEY?: string;
-  APP_SETUP_TOKEN?: string;
-}
-
 type RadarRequest = {
   lens?: string;
   mode?: "specific" | "moment" | "explore";
@@ -64,8 +57,20 @@ function bytesToHex(bytes: Uint8Array) {
   return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
+async function sha256Bytes(value: string) {
+  return new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)));
+}
+
 async function sha256(value: string) {
-  return bytesToHex(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value))));
+  return bytesToHex(await sha256Bytes(value));
+}
+
+async function secretsEqual(left: string, right: string) {
+  const [leftHash, rightHash] = await Promise.all([sha256Bytes(left), sha256Bytes(right)]);
+  const subtle = crypto.subtle as SubtleCrypto & {
+    timingSafeEqual(left: ArrayBufferView, right: ArrayBufferView): boolean;
+  };
+  return subtle.timingSafeEqual(leftHash, rightHash);
 }
 
 async function passwordHash(password: string, salt: Uint8Array) {
@@ -168,7 +173,7 @@ async function handleSetup(request: Request, env: Env) {
   } catch {
     return json({ error: "Pedido inválido." }, 400);
   }
-  if ((await sha256(token)) !== (await sha256(env.APP_SETUP_TOKEN))) return json({ error: "Este link de ativação não é válido." }, 403);
+  if (!(await secretsEqual(token, env.APP_SETUP_TOKEN))) return json({ error: "Este link de ativação não é válido." }, 403);
   if (!/^[a-z0-9._-]{3,32}$/.test(username)) return json({ error: "Use de 3 a 32 letras, números, ponto, traço ou sublinhado no usuário." }, 400);
   if (password.length < 12) return json({ error: "A senha precisa ter pelo menos 12 caracteres." }, 400);
 
@@ -193,7 +198,7 @@ async function handleLogin(request: Request, env: Env) {
   }
   const user = await env.DB.prepare("SELECT id, username, password_hash, password_salt FROM panel_users WHERE username = ?")
     .bind(username).first<{ id: number; username: string; password_hash: string; password_salt: string }>();
-  if (!user || (await passwordHash(password, base64ToBytes(user.password_salt))) !== user.password_hash) {
+  if (!user || !(await secretsEqual(await passwordHash(password, base64ToBytes(user.password_salt)), user.password_hash))) {
     return json({ error: "Usuário ou senha incorretos." }, 401);
   }
   await env.DB.prepare("DELETE FROM panel_sessions WHERE expires_at <= ?").bind(new Date().toISOString()).run();
@@ -380,11 +385,6 @@ Retorne somente um objeto JSON entre as tags <RADAR_JSON> e </RADAR_JSON>, sem m
   }
 }
 
-interface ExecutionContext {
-  waitUntil(promise: Promise<unknown>): void;
-  passThroughOnException(): void;
-}
-
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -404,6 +404,6 @@ const worker = {
 
     return handler.fetch(request, env, ctx);
   },
-};
+} satisfies ExportedHandler<Env>;
 
 export default worker;
