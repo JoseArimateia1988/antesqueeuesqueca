@@ -4,9 +4,6 @@
   "main": "worker/index.ts",
   "compatibility_date": "2026-08-09",
   "compatibility_flags": ["nodejs_compat"],
-  "secrets": {
-    "required": ["APP_ENCRYPTION_KEY", "APP_SETUP_TOKEN"]
-  },
   "assets": {
     "binding": "ASSETS"
   },
