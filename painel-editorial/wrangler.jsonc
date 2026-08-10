@@ -14,7 +14,7 @@
     {
       "binding": "DB",
       "database_name": "antes-que-eu-esqueca-painel",
-      "database_id": "00000000-0000-4000-8000-000000000000",
+      "database_id": "095db3e2-4e08-4b42-9275-8b4b87fc1123",
       "migrations_dir": "drizzle"
     }
   ],
