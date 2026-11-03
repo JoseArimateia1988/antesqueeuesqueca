@@ -395,6 +395,17 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    // Público: a biblioteca original é um arquivo estático copiado no build.
+    // O painel Next.js permanece protegido e acessível somente em /admin.
+    if (url.pathname === "/") {
+      const publicUrl = new URL("/na-gaveta.html", request.url);
+      return env.ASSETS.fetch(new Request(publicUrl, request));
+    }
+    if (url.pathname === "/admin" || url.pathname === "/admin/") {
+      const panelUrl = new URL("/", request.url);
+      return handler.fetch(new Request(panelUrl, request), env, ctx);
+    }
+
     if (url.pathname === "/api/auth/status") return handleAuthStatus(request, env);
     if (url.pathname === "/api/auth/setup") return handleSetup(request, env);
     if (url.pathname === "/api/auth/login") return handleLogin(request, env);
